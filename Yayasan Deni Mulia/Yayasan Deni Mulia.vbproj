@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +64,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -73,11 +89,50 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CekData.Designer.vb">
+      <DependentUpon>CekData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CekData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar.Designer.vb">
+      <DependentUpon>Daftar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data.Designer.vb">
+      <DependentUpon>Data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSiswaSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSiswaSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GambarDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GambarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GambarDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GambarDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konfirmasi.Designer.vb">
+      <DependentUpon>Konfirmasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Konfirmasi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,16 +150,96 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Pembayaran.Designer.vb">
+      <DependentUpon>Pembayaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembayaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sekolah.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sekolah.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SekolahDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SekolahDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TransferDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CekData.resx">
+      <DependentUpon>CekData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar.resx">
+      <DependentUpon>Daftar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.id-ID.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfirmasi.aa.resx">
+      <DependentUpon>Konfirmasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konfirmasi.resx">
+      <DependentUpon>Konfirmasi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pembayaran.resx">
+      <DependentUpon>Pembayaran.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSiswaSet.xsc">
+      <DependentUpon>DataSiswaSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSiswaSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSiswaSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSiswaSet.xss">
+      <DependentUpon>DataSiswaSet.xsd</DependentUpon>
+    </None>
+    <None Include="GambarDataSet.xsc">
+      <DependentUpon>GambarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GambarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GambarDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GambarDataSet.xss">
+      <DependentUpon>GambarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GambarDataSet2.xsc">
+      <DependentUpon>GambarDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GambarDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GambarDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GambarDataSet2.xss">
+      <DependentUpon>GambarDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -115,6 +250,78 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Sekolah.xsc">
+      <DependentUpon>Sekolah.xsd</DependentUpon>
+    </None>
+    <None Include="Sekolah.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sekolah.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sekolah.xss">
+      <DependentUpon>Sekolah.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet.xsc">
+      <DependentUpon>SekolahDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet.xss">
+      <DependentUpon>SekolahDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet1.xsc">
+      <DependentUpon>SekolahDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet1.xss">
+      <DependentUpon>SekolahDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TransferDataSet.xsc">
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TransferDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransferDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransferDataSet.xss">
+      <DependentUpon>TransferDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Data.mdf</DependentUpon>
+    </Content>
+    <Content Include="Sekolah.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sekolah_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Sekolah.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
