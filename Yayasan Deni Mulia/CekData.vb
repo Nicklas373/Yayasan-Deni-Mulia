@@ -58,7 +58,7 @@ Public Class CekData
             Label16.Text = DataGridView3.Item(7, DataGridView3.CurrentRow.Index).Value
             Label17.Text = DataGridView3.Item(8, DataGridView3.CurrentRow.Index).Value
             Label21.Text = "Rp. " + Format(DataGridView3.Item(9, DataGridView3.CurrentRow.Index).Value, "#,###,##0")
-            Label19.Text = Format(DataGridView2.Item(1, DataGridView2.CurrentRow.Index).Value, "yyyy-MM-dd")
+            Label19.Text = Format(DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value, "yyyy-MM-dd")
             con.Close()
             con2.Close()
         Else

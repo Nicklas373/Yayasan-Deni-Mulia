@@ -18,6 +18,7 @@ Public Class Pembayaran
     Dim TKJ As Double = "2,900,000"
     Dim AP As Double = "3,000,000"
     Dim MM As Double = "3,850,000"
+    Dim kelas As Integer = "1"
     Public con = New SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Sekolah").ConnectionString)
     Public cmd As SqlCommand
     Public con2 = New SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString)
@@ -161,12 +162,13 @@ Public Class Pembayaran
                         cmd3.ExecuteNonQuery()
                         con.Close()
                     End Using
-                    cmd2 = New SqlCommand("insert into Data([NIS],[NAMA],[JURUSAN],[EKSKUL],[STATUS],[BIAYA]) values(@nis,@nama,@jurusan,@ekskul,@status,@biaya)", con2)
+                    cmd2 = New SqlCommand("insert into Data([NIS],[NAMA],[JURUSAN],[KELAS],[EKSKUL],[STATUS],[BIAYA]) values(@nis,@nama,@jurusan,@kelas,@ekskul,@status,@biaya)", con2)
                     cmd2.Parameters.Add("@nis", SqlDbType.Int).Value = Daftar.TextBox3.Text
                     cmd2.Parameters.Add("@nama", SqlDbType.NVarChar).Value = Label4.Text
                     RadioButton()
                     JRS()
                     cmd2.Parameters.Add("@jurusan", SqlDbType.NVarChar).Value = rb
+                    cmd2.Parameters.Add("@kelas", SqlDbType.Int).Value = kelas
                     cmd2.Parameters.Add("@ekskul", SqlDbType.NVarChar).Value = Daftar.ComboBox2.Text
                     cmd2.Parameters.Add("@status", SqlDbType.NVarChar).Value = S3
                     cmd2.Parameters.Add("@biaya", SqlDbType.Decimal).Value = rb3
