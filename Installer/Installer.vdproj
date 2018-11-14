@@ -75,7 +75,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Installer.msi"
+        "OutputFilename" = "8:Debug\\Yayasan Deni Mulia.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -92,6 +92,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -116,6 +124,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -333,15 +349,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Yayasan Deni Mulia "
-        "ProductCode" = "8:{E60F024D-FA06-414C-872A-4FB95B20D419}"
-        "PackageCode" = "8:{9EC58A14-8391-485E-BC1C-C37DC6732DDC}"
+        "ProductCode" = "8:{C48F2E4A-E9A0-4ED6-BB6C-7CDE5AA1767A}"
+        "PackageCode" = "8:{CD2CE08B-C35D-4802-9748-7ED38A2F713B}"
         "UpgradeCode" = "8:{F23DC48E-C20D-46B0-AFDB-150B12D6D2D9}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:Gabut Fams"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:www.gokwh.net"
@@ -349,7 +365,7 @@
         "Subject" = "8:Program Pendaftaran Sekolah Yayasan Deni Mulia"
         "ARPCONTACT" = "8:Gabut Fams"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:Aplikasi yayasan deni mulia merupakan aplikasi administrasi yang diperuntukan untuk siswa/i maupun calon siswa/i yayasan deni mulia, yang berfungsi untuk melakukan proses administrasi diantaranya seperti pendaftaran sekolah, pendaftaran ulang, maupun pembayaran agar menjadi lebih mudah dan efisien."
+        "ARPCOMMENTS" = "8:Program Pendaftaran Sekolah atau Daftar Ulang Yayasan Deni Mulia"
         "ARPURLINFOABOUT" = "8:www.gokwh.net"
         "ARPPRODUCTICON" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
         "ARPIconIndex" = "3:0"
@@ -465,10 +481,10 @@
             "Target" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Folder" = "8:_84A07A7243EE4D4EAFBE8E3EC462D0E8"
             "WorkingFolder" = "8:_9F29FD15B3044048B6483904962FB91F"
-            "Icon" = "8:"
+            "Icon" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BB713EF3AF494A66A9B7E43AC0930A21"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_85B3C18332BA4826A4EEAE38E73F9C6F"
             {
             "Name" = "8:Yayasan Deni Mulia"
             "Arguments" = "8:"
@@ -476,10 +492,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_9F29FD15B3044048B6483904962FB91F"
+            "Target" = "8:_95E136C44DCD4A3E9F5762814984930E"
             "Folder" = "8:_71C3278EC9EB4BBFAFBF2F7B26C11B0B"
             "WorkingFolder" = "8:_9F29FD15B3044048B6483904962FB91F"
-            "Icon" = "8:"
+            "Icon" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
             "Feature" = "8:"
             }
         }
