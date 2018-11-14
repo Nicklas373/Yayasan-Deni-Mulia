@@ -29,7 +29,7 @@ Link Download Program :
 https://github.com/Nicklas373/Yayasan-Deni-Mulia/releases
 
 Mirror Download Link (Google Drive)
-https://drive.google.com/open?id=1nPy2c0i736GNCnYuNdREGvCzwZtGoUCp
+https://drive.google.com/open?id=1ZipjwNGEtBvNteIQGbZiKiAEXbyNzCru
 
 Link Download SQLLocalDB (Google Drive) :
 https://drive.google.com/open?id=1OukUqERL5MWs-fbUDVbmZhXk3ZcBOYAO
