@@ -101,11 +101,32 @@
     <Compile Include="Daftar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Daftar_Ulang.Designer.vb">
+      <DependentUpon>Daftar_Ulang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar_Ulang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Data.Designer.vb">
       <DependentUpon>Data.vb</DependentUpon>
     </Compile>
     <Compile Include="Data.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSiswaSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -171,6 +192,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SekolahDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SekolahDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SekolahDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TampilData.Designer.vb">
+      <DependentUpon>TampilData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TampilData.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransferDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -183,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Daftar.resx">
       <DependentUpon>Daftar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar_Ulang.resx">
+      <DependentUpon>Daftar_Ulang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.id-ID.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -205,8 +245,44 @@
     <EmbeddedResource Include="Pembayaran.resx">
       <DependentUpon>Pembayaran.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TampilData.resx">
+      <DependentUpon>TampilData.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataDataSet.xsc">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet.xss">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet1.xsc">
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet1.xss">
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet2.xsc">
+      <DependentUpon>DataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet2.xss">
+      <DependentUpon>DataDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="DataSiswaSet.xsc">
       <DependentUpon>DataSiswaSet.xsd</DependentUpon>
     </None>
@@ -282,6 +358,28 @@
     </None>
     <None Include="SekolahDataSet1.xss">
       <DependentUpon>SekolahDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet2.xsc">
+      <DependentUpon>SekolahDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet2.xss">
+      <DependentUpon>SekolahDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet3.xsc">
+      <DependentUpon>SekolahDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet3.xss">
+      <DependentUpon>SekolahDataSet3.xsd</DependentUpon>
     </None>
     <None Include="TransferDataSet.xsc">
       <DependentUpon>TransferDataSet.xsd</DependentUpon>

@@ -15,13 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0669D53FB0C24ADB864A004A6B465B89"
+        "MsmKey" = "8:_124CE5B2FF104C5E94AD9B135A975CAE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8731254C623E4FECAADD4D12B4C19EC0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,32 +45,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CEFA090E83D4460F89639C5343FEA07E"
+        "MsmKey" = "8:_9FA9C50AB0964ACBB76D1A621BAC6FDC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D0E8AC71E7AA483185EAB8E6285A69DE"
+        "MsmKey" = "8:_E175D1304F6144F4B776CBEEC427EC0F"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D7F0F1EDF3394849B59FE03C5E3CEA16"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9C5AD8F8A09D8C30A938B84829DC5267"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_95E136C44DCD4A3E9F5762814984930E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9C5AD8F8A09D8C30A938B84829DC5267"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -85,6 +85,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -101,6 +109,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -130,10 +146,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0669D53FB0C24ADB864A004A6B465B89"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_124CE5B2FF104C5E94AD9B135A975CAE"
             {
-            "SourcePath" = "8:..\\..\\Yayasan Deni Mulia BAK\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah_log.ldf"
-            "TargetName" = "8:Sekolah_log.ldf"
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Data.mdf"
+            "TargetName" = "8:Data.mdf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Condition" = "8:"
@@ -154,6 +170,26 @@
             {
             "SourcePath" = "8:..\\..\\..\\..\\Downloads\\logopit_1541662194366_451__mvj_icon.ico"
             "TargetName" = "8:logopit_1541662194366_451__mvj_icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8731254C623E4FECAADD4D12B4C19EC0"
+            {
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah_log.ldf"
+            "TargetName" = "8:Sekolah_log.ldf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Condition" = "8:"
@@ -201,9 +237,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CEFA090E83D4460F89639C5343FEA07E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FA9C50AB0964ACBB76D1A621BAC6FDC"
             {
-            "SourcePath" = "8:..\\..\\Yayasan Deni Mulia BAK\\Yayasan Deni Mulia\\bin\\Debug\\Data_log.ldf"
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Data_log.ldf"
             "TargetName" = "8:Data_log.ldf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
@@ -221,29 +257,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0E8AC71E7AA483185EAB8E6285A69DE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E175D1304F6144F4B776CBEEC427EC0F"
             {
-            "SourcePath" = "8:..\\..\\Yayasan Deni Mulia BAK\\Yayasan Deni Mulia\\bin\\Debug\\Data.mdf"
-            "TargetName" = "8:Data.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7F0F1EDF3394849B59FE03C5E3CEA16"
-            {
-            "SourcePath" = "8:..\\..\\Yayasan Deni Mulia BAK\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah.mdf"
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah.mdf"
             "TargetName" = "8:Sekolah.mdf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"

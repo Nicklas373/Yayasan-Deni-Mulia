@@ -124,6 +124,8 @@ Public Class CekData
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        con.close()
+        con2.close()
         Me.Close()
         Konfirmasi.Close()
         Pembayaran.Close()

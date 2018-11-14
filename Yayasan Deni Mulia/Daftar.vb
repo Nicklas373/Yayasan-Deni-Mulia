@@ -29,9 +29,10 @@ Public Class Daftar
         dr = cmd.ExecuteReader()
         If (dr.HasRows) Then
             cekdata()
+            con.Close()
         Else
             con.Close()
-            con.Open()
+			con.open()
             If System.IO.File.Exists(TextBox7.Text) Then
                 uploadimage()
                 RadioButton()
@@ -53,16 +54,16 @@ Public Class Daftar
             con.Open()
             RadioButton()
             Jurusan()
-            cmd2 = New SqlCommand("insert into Sekolah([NAMA],[TEMPAT],[TANGGAL],[NIS],[ALAMAT],[JURUSAN],[HP],[EKSKUL],[EMAIL],[BIAYA],[STATUS]) values(@nama,@tempat,@datetime,@nis,@alamat,@radiobutton,@telp,@combobox2,@mail,@biaya,@status)", con)
+            cmd2 = New SqlCommand("insert into Sekolah([NAMA],[TEMPAT],[TANGGAL],[NIS],[ALAMAT],[JURUSAN],[HP],[EKSKUL],[EMAIL],[BIAYA],[STATUS]) values(@nama,@tempat,@tanggal,@nis,@alamat,@jurusan,@hp,@ekskul,@email,@biaya,@status)", con)
             cmd2.Parameters.Add("@nama", SqlDbType.NVarChar).Value = TextBox1.Text
             cmd2.Parameters.Add("@tempat", SqlDbType.NVarChar).Value = TextBox2.Text
+            cmd2.Parameters.Add("@tanggal", SqlDbType.DateTime).Value = DateTimePicker1.Value
             cmd2.Parameters.Add("@nis", SqlDbType.Int).Value = TextBox3.Text
             cmd2.Parameters.Add("@alamat", SqlDbType.NVarChar).Value = TextBox4.Text
-            cmd2.Parameters.Add("@datetime", SqlDbType.DateTime).Value = DateTimePicker1.Value
-            cmd2.Parameters.Add("@radiobutton", SqlDbType.NVarChar).Value = rb
-            cmd2.Parameters.Add("@telp", SqlDbType.NVarChar).Value = TextBox5.Text
-            cmd2.Parameters.Add("@combobox2", SqlDbType.NVarChar).Value = ComboBox2.Text
-            cmd2.Parameters.Add("@mail", SqlDbType.NVarChar).Value = TextBox6.Text
+            cmd2.Parameters.Add("@jurusan", SqlDbType.NVarChar).Value = rb
+            cmd2.Parameters.Add("@hp", SqlDbType.NVarChar).Value = TextBox5.Text
+            cmd2.Parameters.Add("@ekskul", SqlDbType.NVarChar).Value = ComboBox2.Text
+            cmd2.Parameters.Add("@email", SqlDbType.NVarChar).Value = TextBox6.Text
             cmd2.Parameters.Add("@biaya", SqlDbType.Decimal).Value = rb2
             cmd2.Parameters.Add("@status", SqlDbType.NVarChar).Value = S1
             cmd2.ExecuteNonQuery()
@@ -311,7 +312,6 @@ Public Class Daftar
             TextBox6.Text = ""
             MessageBox.Show("Silahkan mendaftar ulang")
             Me.Close()
-            Data.Show()
             Form1.Show()
         End If
     End Sub

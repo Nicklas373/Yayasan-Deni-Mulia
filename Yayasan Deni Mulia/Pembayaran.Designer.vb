@@ -65,6 +65,9 @@ Partial Class Pembayaran
         Me.SekolahDataSet1 = New Yayasan_Deni_Mulia.SekolahDataSet1()
         Me.SekolahTableAdapter = New Yayasan_Deni_Mulia.SekolahDataSet1TableAdapters.SekolahTableAdapter()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.SekolahDataSet3 = New Yayasan_Deni_Mulia.SekolahDataSet3()
+        Me.SekolahBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahTableAdapter1 = New Yayasan_Deni_Mulia.SekolahDataSet3TableAdapters.SekolahTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +75,8 @@ Partial Class Pembayaran
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -319,7 +324,7 @@ Partial Class Pembayaran
         Me.DataGridView2.AutoGenerateColumns = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NAMADataGridViewTextBoxColumn, Me.TEMPATDataGridViewTextBoxColumn, Me.TANGGALDataGridViewTextBoxColumn, Me.NISDataGridViewTextBoxColumn1, Me.ALAMATDataGridViewTextBoxColumn, Me.JURUSANDataGridViewTextBoxColumn, Me.HPDataGridViewTextBoxColumn, Me.EKSKULDataGridViewTextBoxColumn, Me.EMAILDataGridViewTextBoxColumn, Me.BIAYADataGridViewTextBoxColumn, Me.STATUSDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.SekolahBindingSource
+        Me.DataGridView2.DataSource = Me.SekolahBindingSource1
         Me.DataGridView2.Location = New System.Drawing.Point(753, 198)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -428,6 +433,20 @@ Partial Class Pembayaran
         Me.Label13.TabIndex = 66
         Me.Label13.Text = "Tidak ada foto"
         '
+        'SekolahDataSet3
+        '
+        Me.SekolahDataSet3.DataSetName = "SekolahDataSet3"
+        Me.SekolahDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SekolahBindingSource1
+        '
+        Me.SekolahBindingSource1.DataMember = "Sekolah"
+        Me.SekolahBindingSource1.DataSource = Me.SekolahDataSet3
+        '
+        'SekolahTableAdapter1
+        '
+        Me.SekolahTableAdapter1.ClearBeforeFill = True
+        '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -465,6 +484,8 @@ Partial Class Pembayaran
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -511,4 +532,7 @@ Partial Class Pembayaran
     Friend WithEvents BIAYADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents STATUSDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Label13 As Label
+    Friend WithEvents SekolahDataSet3 As SekolahDataSet3
+    Friend WithEvents SekolahBindingSource1 As BindingSource
+    Friend WithEvents SekolahTableAdapter1 As SekolahDataSet3TableAdapters.SekolahTableAdapter
 End Class
