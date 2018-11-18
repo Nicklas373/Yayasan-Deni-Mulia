@@ -15,19 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_124CE5B2FF104C5E94AD9B135A975CAE"
+        "MsmKey" = "8:_0BAA53A6164A432FBEF4A2E519FB1E27"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_53D2B8721E1C4E52B5EFBA4C181C21C0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_79D4434A225B4885A9C9046904D58245"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8731254C623E4FECAADD4D12B4C19EC0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,13 +51,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9FA9C50AB0964ACBB76D1A621BAC6FDC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E175D1304F6144F4B776CBEEC427EC0F"
+        "MsmKey" = "8:_A39F31C29A024D8B99DA0D5638D3BE4D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -162,10 +162,50 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_124CE5B2FF104C5E94AD9B135A975CAE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BAA53A6164A432FBEF4A2E519FB1E27"
+            {
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah_log.ldf"
+            "TargetName" = "8:Sekolah_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_53D2B8721E1C4E52B5EFBA4C181C21C0"
             {
             "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Data.mdf"
             "TargetName" = "8:Data.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79D4434A225B4885A9C9046904D58245"
+            {
+            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah.mdf"
+            "TargetName" = "8:Sekolah.mdf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Condition" = "8:"
@@ -186,26 +226,6 @@
             {
             "SourcePath" = "8:..\\..\\..\\..\\Downloads\\logopit_1541662194366_451__mvj_icon.ico"
             "TargetName" = "8:logopit_1541662194366_451__mvj_icon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8731254C623E4FECAADD4D12B4C19EC0"
-            {
-            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah_log.ldf"
-            "TargetName" = "8:Sekolah_log.ldf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Condition" = "8:"
@@ -253,30 +273,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FA9C50AB0964ACBB76D1A621BAC6FDC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A39F31C29A024D8B99DA0D5638D3BE4D"
             {
             "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Data_log.ldf"
             "TargetName" = "8:Data_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E175D1304F6144F4B776CBEEC427EC0F"
-            {
-            "SourcePath" = "8:..\\Yayasan Deni Mulia\\bin\\Debug\\Sekolah.mdf"
-            "TargetName" = "8:Sekolah.mdf"
             "Tag" = "8:"
             "Folder" = "8:_9F29FD15B3044048B6483904962FB91F"
             "Condition" = "8:"
@@ -349,24 +349,24 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Yayasan Deni Mulia "
-        "ProductCode" = "8:{C48F2E4A-E9A0-4ED6-BB6C-7CDE5AA1767A}"
-        "PackageCode" = "8:{CD2CE08B-C35D-4802-9748-7ED38A2F713B}"
+        "ProductCode" = "8:{4425F7C4-39DF-4F00-8B61-832BB4296CA8}"
+        "PackageCode" = "8:{FC37A3D2-E774-4902-BC72-904CC22BC31C}"
         "UpgradeCode" = "8:{F23DC48E-C20D-46B0-AFDB-150B12D6D2D9}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:Gabut Fams"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:www.gokwh.net"
+        "ARPHELPLINK" = "8:www.github.com/nicklas373/yayasan-deni-mulia"
         "Title" = "8:Yayasan Deni Mulia - Installer"
         "Subject" = "8:Program Pendaftaran Sekolah Yayasan Deni Mulia"
         "ARPCONTACT" = "8:Gabut Fams"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Program Pendaftaran Sekolah atau Daftar Ulang Yayasan Deni Mulia"
-        "ARPURLINFOABOUT" = "8:www.gokwh.net"
+        "ARPURLINFOABOUT" = "8:www.github.com/nicklas373/yayasan-deni-mulia"
         "ARPPRODUCTICON" = "8:_7C5FD802C6AD4B3FBCA81E13A8BD020E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"

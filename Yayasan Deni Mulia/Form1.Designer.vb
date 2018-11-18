@@ -30,7 +30,15 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.CekDataSiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SiswaBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SiswaLamaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TentangAplikasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TentangKamiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TentangAplikasiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,6 +87,45 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Name = "Label3"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CekDataSiswaToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem})
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
+        Me.MenuStrip1.Name = "MenuStrip1"
+        '
+        'CekDataSiswaToolStripMenuItem
+        '
+        Me.CekDataSiswaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SiswaBaruToolStripMenuItem, Me.SiswaLamaToolStripMenuItem})
+        resources.ApplyResources(Me.CekDataSiswaToolStripMenuItem, "CekDataSiswaToolStripMenuItem")
+        Me.CekDataSiswaToolStripMenuItem.Name = "CekDataSiswaToolStripMenuItem"
+        '
+        'SiswaBaruToolStripMenuItem
+        '
+        Me.SiswaBaruToolStripMenuItem.Name = "SiswaBaruToolStripMenuItem"
+        resources.ApplyResources(Me.SiswaBaruToolStripMenuItem, "SiswaBaruToolStripMenuItem")
+        '
+        'SiswaLamaToolStripMenuItem
+        '
+        Me.SiswaLamaToolStripMenuItem.Name = "SiswaLamaToolStripMenuItem"
+        resources.ApplyResources(Me.SiswaLamaToolStripMenuItem, "SiswaLamaToolStripMenuItem")
+        '
+        'TentangAplikasiToolStripMenuItem
+        '
+        Me.TentangAplikasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TentangKamiToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem1})
+        Me.TentangAplikasiToolStripMenuItem.Name = "TentangAplikasiToolStripMenuItem"
+        resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem, "TentangAplikasiToolStripMenuItem")
+        '
+        'TentangKamiToolStripMenuItem
+        '
+        Me.TentangKamiToolStripMenuItem.Name = "TentangKamiToolStripMenuItem"
+        resources.ApplyResources(Me.TentangKamiToolStripMenuItem, "TentangKamiToolStripMenuItem")
+        '
+        'TentangAplikasiToolStripMenuItem1
+        '
+        Me.TentangAplikasiToolStripMenuItem1.Name = "TentangAplikasiToolStripMenuItem1"
+        resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem1, "TentangAplikasiToolStripMenuItem1")
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
@@ -90,8 +137,12 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -104,4 +155,11 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents CekDataSiswaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SiswaBaruToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SiswaLamaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TentangAplikasiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TentangKamiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TentangAplikasiToolStripMenuItem1 As ToolStripMenuItem
 End Class

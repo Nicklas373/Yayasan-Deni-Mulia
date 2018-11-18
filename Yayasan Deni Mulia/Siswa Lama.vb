@@ -1,0 +1,73 @@
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class Siswa_Lama
+    Public cmd As New SqlCommand
+    Public dt As New DataTable
+    Public da As New SqlDataAdapter
+
+    Private Sub Siswa_Lama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Data_Refresh()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        check_data()
+    End Sub
+
+    Private Function Data_Refresh()
+        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+        Dim con = New SqlConnection(cons)
+        con.Open()
+        dt = New DataTable
+        With cmd
+            .Connection = con
+            .CommandText = "SELECT * FROM Data"
+        End With
+        da.SelectCommand = cmd
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
+        con.Close()
+        da.Dispose()
+        Return 0
+    End Function
+
+    Private Sub FilterData(Nis As String)
+        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+        Dim con = New SqlConnection(cons)
+        Dim searchQuery As String = "SELECT * From Data WHERE NIS like '%" & Nis & "%'"
+        Dim command As New SqlCommand(searchQuery, con)
+        Dim adapter As New SqlDataAdapter(command)
+        Dim table As New DataTable()
+
+        adapter.Fill(table)
+
+        DataGridView1.DataSource = table
+    End Sub
+
+    Private Function check_data()
+        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+        Dim con = New SqlConnection(cons)
+        FilterData(TextBox1.Text)
+        Dim query As String = "select NIS from Data where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", TextBox1.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            MessageBox.Show("Data anda ditemukan")
+        Else
+            MessageBox.Show("Data anda tidak ditemukan")
+            Data_Refresh()
+            con.Close()
+        End If
+        Return 0
+    End Function
+End Class
