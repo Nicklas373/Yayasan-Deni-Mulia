@@ -11,29 +11,29 @@ Public Class Daftar_Ulang
     Dim A As String = "1"
     Dim B As String = "2"
     Dim C As String = "3"
-    Dim AP1 As Double = "1,200,000"
+    Dim AP1 As Integer = "1200000"
     Dim ap11 As String = "satu juta dua ratus ribu rupiah"
-    Dim AP2 As Double = "1,100,000"
+    Dim AP2 As Integer = "1100000"
     Dim ap22 As String = "satu juta seratus ribu rupiah"
-    Dim AP3 As Double = "1,000,000"
+    Dim AP3 As Integer = "1000000"
     Dim ap33 As String = "satu juta rupiah"
-    Dim MM1 As Double = "1,800,000"
+    Dim MM1 As Integer = "1800000"
     Dim mm11 As String = "satu juta delapan ratus ribu rupiah"
-    Dim MM2 As Double = "1,600,000"
+    Dim MM2 As Integer = "1600000"
     Dim mm22 As String = "satu juta enam ratus ribu rupiah"
-    Dim MM3 As Double = "1,400,000"
+    Dim MM3 As Integer = "1400000"
     Dim mm33 As String = "satu juta empat ratus ribu rupiah"
-    Dim AK1 As Double = "1,100,000"
+    Dim AK1 As Integer = "1100000"
     Dim ak11 As String = "satu juta seratus ribut rupiah"
-    Dim AK2 As Double = "1,000,000"
+    Dim AK2 As Integer = "1000000"
     Dim ak22 As String = "satu juta rupiah"
-    Dim AK3 As Double = "950,000"
+    Dim AK3 As Integer = "950000"
     Dim ak33 As String = "sembilan ratus lima puluh ribu rupiah"
-    Dim TKJ1 As Double = "1,000,000"
+    Dim TKJ1 As Integer = "1000000"
     Dim tkj11 As String = "satu juta rupiah"
-    Dim TKJ2 As Double = "950,000"
+    Dim TKJ2 As Integer = "950000"
     Dim tkj22 As String = "sembilan ratus lima puluh ribu rupiah"
-    Dim TKJ3 As Double = "925,000"
+    Dim TKJ3 As Integer = "925000"
     Dim tkj33 As String = "sembilan ratus dua puluh lima ribu rupiah"
     Dim AK As String = "Akuntansi"
     Dim TKJ As String = "Teknik Komputer dan Jaringan"
@@ -85,24 +85,28 @@ Public Class Daftar_Ulang
     End Function
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        FilterData(TextBox2.Text)
-        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
-        Dim con = New SqlConnection(cons)
-        Dim query As String = "select NIS from Data where NIS=@NIS"
-        con.Open()
-        cmd = New SqlCommand(query, con)
-        cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
-        Dim dr As SqlDataReader
-        dr = cmd.ExecuteReader()
-        If (dr.HasRows) Then
-            MessageBox.Show("Data anda ditemukan")
-            Daftar()
-            con.Close()
+        Label8.Text = DataGridView2.Item(5, DataGridView2.CurrentRow.Index).Value
+        If S1 = Label8.Text Then
+            FilterData(TextBox2.Text)
+            Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+            Dim con = New SqlConnection(cons)
+            Dim query As String = "select NIS from Data where NIS=@NIS"
+            con.Open()
+            cmd = New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
+            Dim dr As SqlDataReader
+            dr = cmd.ExecuteReader()
+            If (dr.HasRows) Then
+                MessageBox.Show("Data anda ditemukan")
+                Daftar()
+                con.Close()
+            Else
+                MessageBox.Show("Data anda tidak ditemukan")
+                con.Close()
+            End If
         Else
-            MessageBox.Show("Data anda tidak ditemukan")
-            con.Close()
+            MessageBox.Show("Anda sudah mendaftar ulang")
         End If
-        con.Close()
     End Sub
 
     Private Function Daftar()

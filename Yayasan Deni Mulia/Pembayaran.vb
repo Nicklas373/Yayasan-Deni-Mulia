@@ -4,16 +4,16 @@ Imports System.IO
 
 Public Class Pembayaran
     Dim rb As String
-    Dim rb2 As Double
+    Dim rb2 As Integer
     Dim S1 As String = "Belum Lunas"
     Dim S2 As String = "Sudah Lunas"
     Dim S3 As String = "Belum Daftar Ulang"
     Dim S4 As String = "Sudah Daftar Ulang"
-    Dim biaya As Double = "0"
-    Dim AK As Double = "2,700,000"
-    Dim TKJ As Double = "2,900,000"
-    Dim AP As Double = "3,000,000"
-    Dim MM As Double = "3,850,000"
+    Dim biaya As Integer = "0"
+    Dim AK As Integer = "2700000"
+    Dim TKJ As Integer = "2900000"
+    Dim AP As Integer = "3000000"
+    Dim MM As Integer = "3850000"
     Dim kelas As String = "1"
     Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Sekolah").ConnectionString
     Dim con = New SqlConnection(cons)

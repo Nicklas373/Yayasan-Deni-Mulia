@@ -4,13 +4,13 @@ Imports System.IO
 
 Public Class Daftar
     Dim rb As String
-    Dim rb2 As Double
+    Dim rb2 As Integer
     Dim S1 As String = "Belum Lunas"
     Dim S2 As String = "Sudah Lunas"
-    Dim AK As Double = "2,700,000"
-    Dim TKJ As Double = "2,900,000"
-    Dim AP As Double = "3,000,000"
-    Dim MM As Double = "3,850,000"
+    Dim AK As Integer = "2700000"
+    Dim TKJ As Integer = "2900000"
+    Dim AP As Integer = "3000000"
+    Dim MM As Integer = "3850000"
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
