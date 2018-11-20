@@ -43,6 +43,7 @@ Partial Class Siswa_Lama
         Me.DataTableAdapter = New Yayasan_Deni_Mulia.DataDataSet3TableAdapters.DataTableAdapter()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -194,7 +195,7 @@ Partial Class Siswa_Lama
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(700, 624)
+        Me.Button2.Location = New System.Drawing.Point(838, 624)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 45)
         Me.Button2.TabIndex = 18
@@ -205,12 +206,23 @@ Partial Class Siswa_Lama
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(319, 624)
+        Me.Button1.Location = New System.Drawing.Point(220, 624)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Perbaharui"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(526, 624)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(115, 45)
+        Me.Button4.TabIndex = 19
+        Me.Button4.Text = "Cetak Data"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Siswa_Lama
         '
@@ -219,6 +231,7 @@ Partial Class Siswa_Lama
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1163, 681)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
@@ -258,4 +271,5 @@ Partial Class Siswa_Lama
     Friend WithEvents BIAYADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
 End Class

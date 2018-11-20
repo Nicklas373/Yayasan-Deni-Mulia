@@ -27,9 +27,6 @@ Partial Class Siswa_Baru
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.SekolahDataSet4 = New Yayasan_Deni_Mulia.SekolahDataSet4()
-        Me.SekolahBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SekolahTableAdapter = New Yayasan_Deni_Mulia.SekolahDataSet4TableAdapters.SekolahTableAdapter()
         Me.NAMADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TEMPATDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TANGGALDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,15 +38,19 @@ Partial Class Siswa_Baru
         Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BIAYADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.STATUSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SekolahBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahDataSet4 = New Yayasan_Deni_Mulia.SekolahDataSet4()
+        Me.SekolahTableAdapter = New Yayasan_Deni_Mulia.SekolahDataSet4TableAdapters.SekolahTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SekolahDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -90,20 +91,6 @@ Partial Class Siswa_Baru
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1145, 374)
         Me.DataGridView1.TabIndex = 3
-        '
-        'SekolahDataSet4
-        '
-        Me.SekolahDataSet4.DataSetName = "SekolahDataSet4"
-        Me.SekolahDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SekolahBindingSource
-        '
-        Me.SekolahBindingSource.DataMember = "Sekolah"
-        Me.SekolahBindingSource.DataSource = Me.SekolahDataSet4
-        '
-        'SekolahTableAdapter
-        '
-        Me.SekolahTableAdapter.ClearBeforeFill = True
         '
         'NAMADataGridViewTextBoxColumn
         '
@@ -182,10 +169,24 @@ Partial Class Siswa_Baru
         Me.STATUSDataGridViewTextBoxColumn.Name = "STATUSDataGridViewTextBoxColumn"
         Me.STATUSDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'SekolahBindingSource
+        '
+        Me.SekolahBindingSource.DataMember = "Sekolah"
+        Me.SekolahBindingSource.DataSource = Me.SekolahDataSet4
+        '
+        'SekolahDataSet4
+        '
+        Me.SekolahDataSet4.DataSetName = "SekolahDataSet4"
+        Me.SekolahDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SekolahTableAdapter
+        '
+        Me.SekolahTableAdapter.ClearBeforeFill = True
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Location = New System.Drawing.Point(296, 624)
+        Me.Button1.Location = New System.Drawing.Point(213, 624)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 4
@@ -195,7 +196,7 @@ Partial Class Siswa_Baru
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button2.Location = New System.Drawing.Point(677, 624)
+        Me.Button2.Location = New System.Drawing.Point(775, 624)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 45)
         Me.Button2.TabIndex = 5
@@ -239,6 +240,16 @@ Partial Class Siswa_Baru
         Me.Button3.Text = "Cari"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button4.Location = New System.Drawing.Point(494, 624)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(115, 45)
+        Me.Button4.TabIndex = 10
+        Me.Button4.Text = "Cetak Data"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Siswa_Baru
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -246,6 +257,7 @@ Partial Class Siswa_Baru
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1163, 681)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
@@ -261,8 +273,8 @@ Partial Class Siswa_Baru
         Me.Name = "Siswa_Baru"
         Me.Text = "Cek Data Siswa Baru"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SekolahDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -291,4 +303,5 @@ Partial Class Siswa_Baru
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

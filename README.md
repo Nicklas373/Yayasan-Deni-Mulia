@@ -22,6 +22,8 @@ Program Yang Diperlukan Untuk Instalasi :
 - Microsoft NET.Framework 4.5.2
 
 Status Program :
+- Versi 1.0.6 (Rilis keempat (Tahap Pengembangan / Alpha Build))
+  [20181120]
 - Versi 1.0.4 (Rilis Ketiga (Tahap Pengembangan / Alpha Build))
   [20181118]
 - Versi 1.0.3 (Rilis Kedua (Tahap Pengembangan / Alpha Build))
@@ -31,7 +33,7 @@ Link Download Program :
 https://github.com/Nicklas373/Yayasan-Deni-Mulia/releases
 
 Mirror Download Link (Google Drive)
-https://drive.google.com/open?id=1W4OveW7bcNHXKg9MiJgKpMWiVGxCJS4a
+https://drive.google.com/open?id=17AMtm_KUC3oggXxKIqctId3BUvtPGMTD
 
 Link Download SQLLocalDB (Google Drive) :
 https://drive.google.com/open?id=1OukUqERL5MWs-fbUDVbmZhXk3ZcBOYAO

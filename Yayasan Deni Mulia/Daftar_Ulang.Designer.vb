@@ -45,22 +45,26 @@ Partial Class Daftar_Ulang
         Me.EKSKULDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.STATUSDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BIAYADataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataDataSet2 = New Yayasan_Deni_Mulia.DataDataSet2()
         Me.DataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataDataSet = New Yayasan_Deni_Mulia.DataDataSet()
         Me.DataTableAdapter = New Yayasan_Deni_Mulia.DataDataSetTableAdapters.DataTableAdapter()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.DataDataSet2 = New Yayasan_Deni_Mulia.DataDataSet2()
-        Me.DataBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTableAdapter1 = New Yayasan_Deni_Mulia.DataDataSet2TableAdapters.DataTableAdapter()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.SekolahDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -121,6 +125,7 @@ Partial Class Daftar_Ulang
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(368, 280)
         Me.Label6.Name = "Label6"
@@ -239,6 +244,16 @@ Partial Class Daftar_Ulang
         Me.BIAYADataGridViewTextBoxColumn1.Name = "BIAYADataGridViewTextBoxColumn1"
         Me.BIAYADataGridViewTextBoxColumn1.ReadOnly = True
         '
+        'DataBindingSource1
+        '
+        Me.DataBindingSource1.DataMember = "Data"
+        Me.DataBindingSource1.DataSource = Me.DataDataSet2
+        '
+        'DataDataSet2
+        '
+        Me.DataDataSet2.DataSetName = "DataDataSet2"
+        Me.DataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DataBindingSource
         '
         Me.DataBindingSource.DataMember = "Data"
@@ -280,19 +295,42 @@ Partial Class Daftar_Ulang
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Label9"
         '
-        'DataDataSet2
-        '
-        Me.DataDataSet2.DataSetName = "DataDataSet2"
-        Me.DataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataBindingSource1
-        '
-        Me.DataBindingSource1.DataMember = "Data"
-        Me.DataBindingSource1.DataSource = Me.DataDataSet2
-        '
         'DataTableAdapter1
         '
         Me.DataTableAdapter1.ClearBeforeFill = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.SystemColors.Control
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(85, 16)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(70, 21)
+        Me.Label10.TabIndex = 15
+        Me.Label10.Text = "Nominal"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.SystemColors.Control
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(2, 16)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(77, 21)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "Nominal :"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Location = New System.Drawing.Point(296, 324)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(354, 60)
+        Me.GroupBox1.TabIndex = 17
+        Me.GroupBox1.TabStop = False
         '
         'Daftar_Ulang
         '
@@ -301,6 +339,7 @@ Partial Class Daftar_Ulang
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(819, 457)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -321,10 +360,12 @@ Partial Class Daftar_Ulang
         CType(Me.SekolahDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -360,4 +401,7 @@ Partial Class Daftar_Ulang
     Friend WithEvents DataDataSet2 As DataDataSet2
     Friend WithEvents DataBindingSource1 As BindingSource
     Friend WithEvents DataTableAdapter1 As DataDataSet2TableAdapters.DataTableAdapter
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

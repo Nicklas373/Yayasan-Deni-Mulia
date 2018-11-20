@@ -70,4 +70,12 @@ Public Class Siswa_Lama
         End If
         Return 0
     End Function
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If IsNumeric(TextBox1.Text) Then
+            CekData.Show()
+        Else
+            MsgBox("Harap Masukkan NIS anda")
+        End If
+    End Sub
 End Class

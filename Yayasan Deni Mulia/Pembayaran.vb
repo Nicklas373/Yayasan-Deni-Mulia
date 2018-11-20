@@ -211,6 +211,32 @@ Public Class Pembayaran
                     trf()
                     MessageBox.Show("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia")
                     Konfirmasi.Show()
+                ElseIf total = bayar Then
+                    hasil = bayar
+                    MessageBox.Show("Pembayaran telah berhasil " + vbCrLf + "Saldo pembayaran sebesar :  " + "Rp. " + total)
+                    con.open()
+                    Dim updateQuery As String = "UPDATE dbo.Sekolah SET dbo.Sekolah.STATUS = @status WHERE Sekolah.NIS = @nis"
+                    Using cmd3 As New SqlCommand(updateQuery, con)
+                        cmd3.Parameters.Add(New SqlParameter With {.ParameterName = "@nis", .SqlDbType = SqlDbType.Int, .Value = Daftar.TextBox3.Text})
+                        cmd3.Parameters.Add(New SqlParameter With {.ParameterName = "@status", .SqlDbType = SqlDbType.NVarChar, .Value = S2})
+                        cmd3.ExecuteNonQuery()
+                        con.Close()
+                    End Using
+                    con2.Open()
+                    cmd2 = New SqlCommand("insert into Data([NIS],[NAMA],[JURUSAN],[KELAS],[EKSKUL],[STATUS],[BIAYA]) values(@nis,@nama,@jurusan,@kelas,@ekskul,@status,@biaya)", con2)
+                    cmd2.Parameters.Add("@nis", SqlDbType.Int).Value = Daftar.TextBox3.Text
+                    cmd2.Parameters.Add("@nama", SqlDbType.NVarChar).Value = Label4.Text
+                    RadioButton()
+                    cmd2.Parameters.Add("@jurusan", SqlDbType.NVarChar).Value = rb
+                    cmd2.Parameters.Add("@kelas", SqlDbType.NVarChar).Value = kelas
+                    cmd2.Parameters.Add("@ekskul", SqlDbType.NVarChar).Value = Daftar.ComboBox2.Text
+                    cmd2.Parameters.Add("@status", SqlDbType.NVarChar).Value = S3
+                    cmd2.Parameters.Add("@biaya", SqlDbType.Decimal).Value = biaya
+                    cmd2.ExecuteNonQuery()
+                    con2.Close()
+                    trf()
+                    MessageBox.Show("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia")
+                    Konfirmasi.Show()
                 ElseIf total < bayar Then
                     con.close()
                     hasil = total - bayar

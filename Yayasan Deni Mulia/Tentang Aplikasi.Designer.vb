@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Tentang_Aplikasi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -29,7 +29,7 @@ Partial Class Tentang_Aplikasi
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Tentang_Aplikasi))
         Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
@@ -68,7 +68,8 @@ Partial Class Tentang_Aplikasi
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.Size = New System.Drawing.Size(703, 282)
+        Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel.Size = New System.Drawing.Size(703, 286)
         Me.TableLayoutPanel.TabIndex = 0
         '
         'LogoPictureBox
@@ -80,7 +81,7 @@ Partial Class Tentang_Aplikasi
         Me.LogoPictureBox.Location = New System.Drawing.Point(3, 3)
         Me.LogoPictureBox.Name = "LogoPictureBox"
         Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)
-        Me.LogoPictureBox.Size = New System.Drawing.Size(225, 276)
+        Me.LogoPictureBox.Size = New System.Drawing.Size(225, 280)
         Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.LogoPictureBox.TabIndex = 0
         Me.LogoPictureBox.TabStop = False
@@ -110,7 +111,7 @@ Partial Class Tentang_Aplikasi
         Me.LabelVersion.Name = "LabelVersion"
         Me.LabelVersion.Size = New System.Drawing.Size(463, 17)
         Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "Versi : 1.0.4 (Alpha)"
+        Me.LabelVersion.Text = "Versi : 1.0.6 (Alpha)"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright
@@ -152,7 +153,7 @@ Partial Class Tentang_Aplikasi
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(463, 135)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(463, 137)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
@@ -163,7 +164,7 @@ Partial Class Tentang_Aplikasi
         Me.OKButton.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.OKButton.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OKButton.Location = New System.Drawing.Point(625, 256)
+        Me.OKButton.Location = New System.Drawing.Point(625, 260)
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(75, 23)
         Me.OKButton.TabIndex = 0
@@ -175,7 +176,7 @@ Partial Class Tentang_Aplikasi
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.OKButton
-        Me.ClientSize = New System.Drawing.Size(721, 300)
+        Me.ClientSize = New System.Drawing.Size(721, 304)
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -184,12 +185,11 @@ Partial Class Tentang_Aplikasi
         Me.Padding = New System.Windows.Forms.Padding(9)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Tentang_Aplikasi"
+        Me.Text = "Tentang Aplikasi"
         Me.TableLayoutPanel.ResumeLayout(False)
         Me.TableLayoutPanel.PerformLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
 End Class

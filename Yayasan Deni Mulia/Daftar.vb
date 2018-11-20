@@ -46,9 +46,8 @@ Public Class Daftar
     End Sub
 
     Private Function register()
-        If IsNumeric(TextBox3.Text) Then
+        If IsNumeric(TextBox3.Text) And RadioButton1.Checked = True OrElse RadioButton2.Checked = True OrElse RadioButton3.Checked = True OrElse RadioButton4.Checked = True Then
             Dim cmd2 As SqlCommand
-
             Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Sekolah").ConnectionString
             Dim con = New SqlConnection(cons)
             con.Open()
@@ -71,7 +70,7 @@ Public Class Daftar
             con.Close()
             Pembayaran.Show()
         Else
-            MessageBox.Show("Harap isi NIS anda dengan angka")
+            MessageBox.Show("Harap isi NIS anda dengan angka & Harap isi jurusan anda")
             TextBox3.Text = ""
         End If
         Return 0
@@ -300,7 +299,7 @@ Public Class Daftar
         ElseIf S2 = Label11.Text Then
             MessageBox.Show("Anda sudah terdaftar" + vbCrLf + "Anda sudah melunasi pembayaran")
             MessageBox.Show("Silahkan mendaftar ulang")
-            Data.Show()
+            Daftar_Ulang.Show()
             Me.Close()
         Else
             MessageBox.Show("Anda sudah terdaftar")

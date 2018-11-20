@@ -12,17 +12,29 @@ Public Class Daftar_Ulang
     Dim B As String = "2"
     Dim C As String = "3"
     Dim AP1 As Double = "1,200,000"
+    Dim ap11 As String = "satu juta dua ratus ribu rupiah"
     Dim AP2 As Double = "1,100,000"
+    Dim ap22 As String = "satu juta seratus ribu rupiah"
     Dim AP3 As Double = "1,000,000"
+    Dim ap33 As String = "satu juta rupiah"
     Dim MM1 As Double = "1,800,000"
+    Dim mm11 As String = "satu juta delapan ratus ribu rupiah"
     Dim MM2 As Double = "1,600,000"
+    Dim mm22 As String = "satu juta enam ratus ribu rupiah"
     Dim MM3 As Double = "1,400,000"
+    Dim mm33 As String = "satu juta empat ratus ribu rupiah"
     Dim AK1 As Double = "1,100,000"
+    Dim ak11 As String = "satu juta seratus ribut rupiah"
     Dim AK2 As Double = "1,000,000"
+    Dim ak22 As String = "satu juta rupiah"
     Dim AK3 As Double = "950,000"
+    Dim ak33 As String = "sembilan ratus lima puluh ribu rupiah"
     Dim TKJ1 As Double = "1,000,000"
+    Dim tkj11 As String = "satu juta rupiah"
     Dim TKJ2 As Double = "950,000"
+    Dim tkj22 As String = "sembilan ratus lima puluh ribu rupiah"
     Dim TKJ3 As Double = "925,000"
+    Dim tkj33 As String = "sembilan ratus dua puluh lima ribu rupiah"
     Dim AK As String = "Akuntansi"
     Dim TKJ As String = "Teknik Komputer dan Jaringan"
     Dim MM As String = "Multimedia"
@@ -37,6 +49,9 @@ Public Class Daftar_Ulang
         Label7.Visible = False
         Label8.Visible = False
         Label9.Visible = False
+        Label10.Visible = False
+        Label11.Visible = False
+        GroupBox1.Visible = False
         ComboBox1.Items.Add("1")
         ComboBox1.Items.Add("2")
         ComboBox1.Items.Add("3")
@@ -96,18 +111,30 @@ Public Class Daftar_Ulang
             If ComboBox1.SelectedText = A Then
                 KLS = A
                 Label9.Text = AK1
+                Label10.Text = ak11
                 Label6.Text = "Rp. " + Format(AK1, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = AK2
+                Label10.Text = ak22
                 Label6.Text = "Rp. " + Format(AK2, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = AK3
+                Label10.Text = ak33
                 Label6.Text = "Rp. " + Format(AK3, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             Else
                 MsgBox("Data Invalid")
             End If
@@ -115,18 +142,30 @@ Public Class Daftar_Ulang
             If ComboBox1.SelectedText = A Then
                 KLS = A
                 Label9.Text = AP1
+                Label10.Text = ap11
                 Label6.Text = "Rp. " + Format(AP1, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = AP2
+                Label10.Text = ap22
                 Label6.Text = "Rp. " + Format(AP2, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = AP3
+                Label10.Text = ap33
                 Label6.Text = "Rp. " + Format(AP3, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             Else
                 MsgBox("Data Invalid")
             End If
@@ -134,18 +173,30 @@ Public Class Daftar_Ulang
             If ComboBox1.SelectedText = A Then
                 KLS = A
                 Label9.Text = MM1
+                Label10.Text = mm11
                 Label6.Text = "Rp. " + Format(MM1, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = MM2
+                Label10.Text = mm22
                 Label6.Text = "Rp. " + Format(MM2, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = MM3
+                Label10.Text = mm33
                 Label6.Text = "Rp. " + Format(MM3, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             Else
                 MsgBox("Data Invalid")
             End If
@@ -153,18 +204,30 @@ Public Class Daftar_Ulang
             If ComboBox1.SelectedText = A Then
                 KLS = A
                 Label9.Text = TKJ1
+                Label10.Text = tkj11
                 Label6.Text = "Rp. " + Format(TKJ1, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = TKJ2
+                Label10.Text = tkj22
                 Label6.Text = "Rp. " + Format(TKJ2, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = TKJ3
+                Label10.Text = tkj33
                 Label6.Text = "Rp. " + Format(TKJ3, "#,###,##0")
                 Label6.Visible = True
+                Label10.Visible = True
+                Label11.Visible = True
+                GroupBox1.Visible = True
             Else
                 MsgBox("Data Invalid")
             End If

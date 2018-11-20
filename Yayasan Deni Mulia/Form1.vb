@@ -7,8 +7,7 @@
         Daftar_Ulang.Show()
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MessageBox.Show("Data sementara :v")
-        TampilData.Show()
+        MessageBox.Show("Belom dibuat")
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

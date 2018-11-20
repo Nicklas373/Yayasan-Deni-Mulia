@@ -838,6 +838,45 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="SiswaBaruToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="SiswaBaruToolStripMenuItem.Text" xml:space="preserve">
+    <value>Siswa Baru</value>
+  </data>
+  <data name="SiswaLamaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="SiswaLamaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Siswa Lama</value>
+  </data>
+  <data name="CekDataSiswaToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>ActiveCaption</value>
+  </data>
+  <data name="CekDataSiswaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="CekDataSiswaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cek Data Siswa</value>
+  </data>
+  <data name="TentangKamiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="TentangKamiToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tentang Kami</value>
+  </data>
+  <data name="TentangAplikasiToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="TentangAplikasiToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Tentang Aplikasi</value>
+  </data>
+  <data name="TentangAplikasiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="TentangAplikasiToolStripMenuItem.Text" xml:space="preserve">
+    <value>Informasi Aplikasi</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -861,45 +900,6 @@
   </data>
   <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="CekDataSiswaToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>ActiveCaption</value>
-  </data>
-  <data name="CekDataSiswaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="CekDataSiswaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cek Data Siswa</value>
-  </data>
-  <data name="SiswaBaruToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="SiswaBaruToolStripMenuItem.Text" xml:space="preserve">
-    <value>Siswa Baru</value>
-  </data>
-  <data name="SiswaLamaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="SiswaLamaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Siswa Lama</value>
-  </data>
-  <data name="TentangAplikasiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 20</value>
-  </data>
-  <data name="TentangAplikasiToolStripMenuItem.Text" xml:space="preserve">
-    <value>Informasi Aplikasi</value>
-  </data>
-  <data name="TentangKamiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="TentangKamiToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tentang Kami</value>
-  </data>
-  <data name="TentangAplikasiToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="TentangAplikasiToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Tentang Aplikasi</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

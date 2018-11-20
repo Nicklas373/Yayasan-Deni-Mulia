@@ -19,11 +19,28 @@ Public Class CekData
         DataGridView1.Visible = False
         DataGridView2.Visible = False
         DataGridView3.Visible = False
-        FilterData("")
-        gambar("")
-        checkimage()
-        transfer("")
-        DataLoad()
+        If Application.OpenForms().OfType(Of Pembayaran).Any Then
+            FilterData("")
+            gambar("")
+            checkimage()
+            transfer("")
+            DataLoad()
+        ElseIf Application.OpenForms().OfType(Of siswa_baru).Any Then
+            FilterData("")
+            gambar("")
+            checkimage2()
+            transfer("")
+            DataLoad2()
+        ElseIf Application.OpenForms().OfType(Of siswa_lama).Any Then
+            FilterData("")
+            gambar("")
+            checkimage3()
+            transfer("")
+            DataLoad3()
+        Else
+            MsgBox("Data tidak ditemukan")
+            Me.Close()
+        End If
     End Sub
 
     Private Sub FilterData(Nis As String)
@@ -68,6 +85,67 @@ Public Class CekData
         End If
     End Sub
 
+    Private Sub DataLoad2()
+        FilterData(Siswa_Baru.TextBox1.Text)
+        gambar(Siswa_Baru.TextBox1.Text)
+        transfer(Siswa_Baru.TextBox1.Text)
+        Dim query As String = "select NIS from Sekolah where NIS=@NIS"
+        con.Open()
+        con2.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Baru.TextBox1.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            Label10.Text = DataGridView3.Item(0, DataGridView3.CurrentRow.Index).Value
+            Label11.Text = DataGridView3.Item(1, DataGridView3.CurrentRow.Index).Value + " / " + Format(DataGridView3.Item(2, DataGridView3.CurrentRow.Index).Value, "yyyy-MM-dd")
+            Label12.Text = DataGridView3.Item(3, DataGridView3.CurrentRow.Index).Value
+            Label13.Text = DataGridView3.Item(4, DataGridView3.CurrentRow.Index).Value
+            Label14.Text = DataGridView3.Item(5, DataGridView3.CurrentRow.Index).Value
+            Label15.Text = DataGridView3.Item(6, DataGridView3.CurrentRow.Index).Value
+            Label16.Text = DataGridView3.Item(7, DataGridView3.CurrentRow.Index).Value
+            Label17.Text = DataGridView3.Item(8, DataGridView3.CurrentRow.Index).Value
+            Label21.Text = "Rp. " + Format(DataGridView3.Item(9, DataGridView3.CurrentRow.Index).Value, "#,###,##0")
+            Label19.Text = Format(DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value, "yyyy-MM-dd")
+            con.Close()
+            con2.Close()
+        Else
+            MessageBox.Show("Data tidak ditemukan")
+            con.Close()
+            con2.Close()
+        End If
+    End Sub
+
+    Private Sub DataLoad3()
+        FilterData(Siswa_Lama.TextBox1.Text)
+        gambar(Siswa_Lama.TextBox1.Text)
+        transfer(Siswa_Lama.TextBox1.Text)
+        Dim query As String = "select NIS from Sekolah where NIS=@NIS"
+        con.Open()
+        con2.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Lama.TextBox1.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            Label10.Text = DataGridView3.Item(0, DataGridView3.CurrentRow.Index).Value
+            Label11.Text = DataGridView3.Item(1, DataGridView3.CurrentRow.Index).Value + " / " + Format(DataGridView3.Item(2, DataGridView3.CurrentRow.Index).Value, "yyyy-MM-dd")
+            Label12.Text = DataGridView3.Item(3, DataGridView3.CurrentRow.Index).Value
+            Label13.Text = DataGridView3.Item(4, DataGridView3.CurrentRow.Index).Value
+            Label14.Text = DataGridView3.Item(5, DataGridView3.CurrentRow.Index).Value
+            Label15.Text = DataGridView3.Item(6, DataGridView3.CurrentRow.Index).Value
+            Label16.Text = DataGridView3.Item(7, DataGridView3.CurrentRow.Index).Value
+            Label17.Text = DataGridView3.Item(8, DataGridView3.CurrentRow.Index).Value
+            Label21.Text = "Rp. " + Format(DataGridView3.Item(9, DataGridView3.CurrentRow.Index).Value, "#,###,##0")
+            Label19.Text = Format(DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value, "yyyy-MM-dd")
+            con.Close()
+            con2.Close()
+        Else
+            MessageBox.Show("Data tidak ditemukan")
+            con.Close()
+            con2.Close()
+        End If
+    End Sub
     Private Sub gambar(Nis As String)
         Dim searchQuery As String = "SELECT * From Gambar WHERE NIS like '%" & Nis & "%'"
         Dim command As New SqlCommand(searchQuery, con)
@@ -93,6 +171,34 @@ Public Class CekData
         Return 0
     End Function
 
+    Private Function lgambar2()
+        Dim dt As New DataTable
+        Dim bytes As [Byte]() = CType(DataGridView2.Item(2, DataGridView2.CurrentRow.Index).Value, Byte())
+        Dim ms As New MemoryStream(bytes)
+        Dim query As String = "select NIS from gambar where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Baru.TextBox1.Text)
+        PictureBox1.Image = Image.FromStream(ms)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        con.Close()
+        Return 0
+    End Function
+
+    Private Function lgambar3()
+        Dim dt As New DataTable
+        Dim bytes As [Byte]() = CType(DataGridView2.Item(2, DataGridView2.CurrentRow.Index).Value, Byte())
+        Dim ms As New MemoryStream(bytes)
+        Dim query As String = "select NIS from gambar where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Lama.TextBox1.Text)
+        PictureBox1.Image = Image.FromStream(ms)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        con.Close()
+        Return 0
+    End Function
+
     Private Sub checkimage()
         gambar(Pembayaran.Label5.Text)
         Dim query As String = "select NIS from Gambar where NIS=@NIS"
@@ -105,6 +211,44 @@ Public Class CekData
             con.Close()
             Label22.Visible = False
             lgambar()
+        Else
+            Label22.Visible = True
+            PictureBox1.Visible = False
+        End If
+        con.Close()
+    End Sub
+
+    Private Sub checkimage2()
+        gambar(Siswa_Baru.TextBox1.Text)
+        Dim query As String = "select NIS from Gambar where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Baru.TextBox1.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            con.Close()
+            Label22.Visible = False
+            lgambar2()
+        Else
+            Label22.Visible = True
+            PictureBox1.Visible = False
+        End If
+        con.Close()
+    End Sub
+
+    Private Sub checkimage3()
+        gambar(Siswa_Lama.TextBox1.Text)
+        Dim query As String = "select NIS from Gambar where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", Siswa_Lama.TextBox1.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            con.Close()
+            Label22.Visible = False
+            lgambar3()
         Else
             Label22.Visible = True
             PictureBox1.Visible = False

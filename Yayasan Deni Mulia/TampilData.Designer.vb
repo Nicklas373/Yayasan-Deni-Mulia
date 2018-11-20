@@ -25,9 +25,6 @@ Partial Class TampilData
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TampilData))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataDataSet1 = New Yayasan_Deni_Mulia.DataDataSet1()
-        Me.DataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataTableAdapter = New Yayasan_Deni_Mulia.DataDataSet1TableAdapters.DataTableAdapter()
         Me.NISDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NAMADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.JURUSANDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,9 +32,12 @@ Partial Class TampilData
         Me.EKSKULDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.STATUSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BIAYADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataDataSet1 = New Yayasan_Deni_Mulia.DataDataSet1()
+        Me.DataTableAdapter = New Yayasan_Deni_Mulia.DataDataSet1TableAdapters.DataTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -54,20 +54,6 @@ Partial Class TampilData
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(746, 385)
         Me.DataGridView1.TabIndex = 0
-        '
-        'DataDataSet1
-        '
-        Me.DataDataSet1.DataSetName = "DataDataSet1"
-        Me.DataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataBindingSource
-        '
-        Me.DataBindingSource.DataMember = "Data"
-        Me.DataBindingSource.DataSource = Me.DataDataSet1
-        '
-        'DataTableAdapter
-        '
-        Me.DataTableAdapter.ClearBeforeFill = True
         '
         'NISDataGridViewTextBoxColumn
         '
@@ -118,6 +104,20 @@ Partial Class TampilData
         Me.BIAYADataGridViewTextBoxColumn.Name = "BIAYADataGridViewTextBoxColumn"
         Me.BIAYADataGridViewTextBoxColumn.ReadOnly = True
         '
+        'DataBindingSource
+        '
+        Me.DataBindingSource.DataMember = "Data"
+        Me.DataBindingSource.DataSource = Me.DataDataSet1
+        '
+        'DataDataSet1
+        '
+        Me.DataDataSet1.DataSetName = "DataDataSet1"
+        Me.DataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataTableAdapter
+        '
+        Me.DataTableAdapter.ClearBeforeFill = True
+        '
         'TampilData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,11 +126,12 @@ Partial Class TampilData
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(819, 457)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TampilData"
         Me.Text = "Data Siswa "
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
