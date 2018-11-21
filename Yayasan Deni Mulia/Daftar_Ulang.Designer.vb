@@ -318,9 +318,9 @@ Partial Class Daftar_Ulang
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(2, 16)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(77, 21)
+        Me.Label11.Size = New System.Drawing.Size(80, 21)
         Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Nominal :"
+        Me.Label11.Text = "Terbilang :"
         '
         'GroupBox1
         '

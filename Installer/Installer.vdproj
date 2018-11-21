@@ -249,6 +249,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_9C5AD8F8A09D8C30A938B84829DC5267"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -344,15 +349,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Yayasan Deni Mulia "
-        "ProductCode" = "8:{C701789C-8184-4291-A089-05DAD1C32B1C}"
-        "PackageCode" = "8:{F544411F-CA45-495C-8928-6A9E8139B1B0}"
+        "ProductCode" = "8:{49CE012D-EE85-493C-BD4F-1069FDE8F9B9}"
+        "PackageCode" = "8:{9B79368F-1470-4E39-8DD0-CC2072C8C933}"
         "UpgradeCode" = "8:{F23DC48E-C20D-46B0-AFDB-150B12D6D2D9}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.6"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:1.0.7"
         "Manufacturer" = "8:Gabut Fams"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:www.github.com/nicklas373/yayasan-deni-mulia"

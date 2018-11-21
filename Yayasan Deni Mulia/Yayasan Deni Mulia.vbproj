@@ -89,6 +89,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anggota.Designer.vb">
+      <DependentUpon>anggota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="anggota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CekData.Designer.vb">
       <DependentUpon>CekData.vb</DependentUpon>
     </Compile>
@@ -105,12 +111,6 @@
       <DependentUpon>Daftar_Ulang.vb</DependentUpon>
     </Compile>
     <Compile Include="Daftar_Ulang.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data.Designer.vb">
-      <DependentUpon>Data.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Data.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataDataSet.Designer.vb">
@@ -224,6 +224,12 @@
     <Compile Include="Siswa Lama.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TampilData.Designer.vb">
       <DependentUpon>TampilData.vb</DependentUpon>
     </Compile>
@@ -243,6 +249,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="anggota.resx">
+      <DependentUpon>anggota.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CekData.resx">
       <DependentUpon>CekData.vb</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Siswa Lama.resx">
       <DependentUpon>Siswa Lama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TampilData.resx">
       <DependentUpon>TampilData.vb</DependentUpon>

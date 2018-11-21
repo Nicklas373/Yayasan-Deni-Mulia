@@ -314,4 +314,15 @@ Public Class Daftar
             Form1.Show()
         End If
     End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+        If TextBox3.Text.Length >= 8 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MsgBox("Harap masukkan NIS kurang dari 8 digit")
+                TextBox3.Clear()
+                TextBox3.Focus()
+            End If
+        End If
+    End Sub
 End Class

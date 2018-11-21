@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,6 +38,8 @@ Partial Class Form1
         Me.TentangAplikasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TentangKamiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TentangAplikasiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -126,10 +129,21 @@ Partial Class Form1
         Me.TentangAplikasiToolStripMenuItem1.Name = "TentangAplikasiToolStripMenuItem1"
         resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem1, "TentangAplikasiToolStripMenuItem1")
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 50
+        '
+        'ProgressBar1
+        '
+        resources.ApplyResources(Me.ProgressBar1, "ProgressBar1")
+        Me.ProgressBar1.Name = "ProgressBar1"
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -162,4 +176,6 @@ Partial Class Form1
     Friend WithEvents TentangAplikasiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TentangKamiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TentangAplikasiToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

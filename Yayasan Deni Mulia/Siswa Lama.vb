@@ -78,4 +78,15 @@ Public Class Siswa_Lama
             MsgBox("Harap Masukkan NIS anda")
         End If
     End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If TextBox1.Text.Length >= 8 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MsgBox("Harap masukkan NIS kurang dari 8 digit")
+                TextBox1.Clear()
+                TextBox1.Focus()
+            End If
+        End If
+    End Sub
 End Class

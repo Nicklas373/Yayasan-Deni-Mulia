@@ -311,4 +311,15 @@ Public Class Daftar_Ulang
             MsgBox("Data Invalid")
         End If
     End Sub
+
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+        If TextBox2.Text.Length >= 8 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MsgBox("Harap masukkan NIS kurang dari 8 digit")
+                TextBox2.Clear()
+                TextBox2.Focus()
+            End If
+        End If
+    End Sub
 End Class
