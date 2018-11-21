@@ -38,7 +38,7 @@ Mirror Download Link (Google Drive)
 - https://drive.google.com/open?id=1m4kcKthZWGVsBjiKWepchWMhiczNamca
 
 Mirror#2 Download Link (MEGA)
-https://mega.nz/#!WgY1iCzY!ur1-WOQE_yhrMEyXt4z7Fk8zba-b59pAVSvEmKkxqIw
+- https://mega.nz/#!WgY1iCzY!ur1-WOQE_yhrMEyXt4z7Fk8zba-b59pAVSvEmKkxqIw
 
 Link Download SQLLocalDB (Google Drive) :
 - https://drive.google.com/open?id=1OukUqERL5MWs-fbUDVbmZhXk3ZcBOYAO
