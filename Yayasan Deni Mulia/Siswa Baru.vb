@@ -65,7 +65,6 @@ Public Class Siswa_Baru
             MessageBox.Show("Data anda ditemukan")
         Else
             MessageBox.Show("Data anda tidak ditemukan")
-            Data_Refresh()
             con.Close()
         End If
         Return 0

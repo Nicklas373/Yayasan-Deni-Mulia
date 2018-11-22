@@ -259,7 +259,6 @@ Public Class Daftar_Ulang
         If S1 = Label8.Text Then
             Dim harga As Double
             harga = CDbl(Label9.Text)
-            MessageBox.Show("anda belum mendaftar ulang, silahkan mendaftar ulang")
             Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
             Dim con = New SqlConnection(cons)
             Dim bayar As Double
@@ -303,6 +302,7 @@ Public Class Daftar_Ulang
                 hasil = harga - bayar
                 MsgBox("Anda membayar sebesar : " + Format(bayar, "#,###,##0") + vbCrLf + "Uang anda kurang sebesar : " + " " + "Rp. " + Format(hasil, "#,###,##0") + vbCrLf + "Pembayaran ditunda")
             Else
+
                 con.Close()
             End If
         ElseIf S2 = Label8.Text Then

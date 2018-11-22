@@ -111,7 +111,7 @@ Partial Class Tentang_Aplikasi
         Me.LabelVersion.Name = "LabelVersion"
         Me.LabelVersion.Size = New System.Drawing.Size(463, 17)
         Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "Versi : 1.0.7 (Alpha) DTI"
+        Me.LabelVersion.Text = "Versi : 1.0.8 (BETA) DTI"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright

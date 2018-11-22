@@ -81,7 +81,7 @@ Partial Class SplashScreen1
         Me.Version.Name = "Version"
         Me.Version.Size = New System.Drawing.Size(241, 20)
         Me.Version.TabIndex = 1
-        Me.Version.Text = "Versi 1.0.7 (Alpha) DTI"
+        Me.Version.Text = "Versi 1.0.8 (BETA) DTI"
         '
         'Copyright
         '
