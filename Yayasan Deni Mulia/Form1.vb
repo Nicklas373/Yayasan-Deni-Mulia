@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Windows.Forms
+
+Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Daftar.Show()
     End Sub
@@ -14,13 +16,22 @@
         ProgressBar1.Hide()
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ProgressBar1.Increment(1)
-        Me.Hide()
-        SplashScreen1.Show()
-        If ProgressBar1.Value = 100 Then
-            Timer1.Enabled = False
-        End If
+    Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        Select Case e.CloseReason
+            Case CloseReason.ApplicationExitCall
+                e.Cancel = False
+                SplashScreen1.Close()
+            Case CloseReason.UserClosing
+                Select Case MessageBox.Show("Apakah anda ingin keluar ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    Case DialogResult.Yes
+                        e.Cancel = False
+                        SplashScreen1.Close()
+                    Case DialogResult.No
+                        e.Cancel = True
+                End Select
+            Case Else
+                e.Cancel = False
+        End Select
     End Sub
 
     Private Sub SiswaBaruToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SiswaBaruToolStripMenuItem.Click

@@ -385,7 +385,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Sekolah.xsc">
       <DependentUpon>Sekolah.xsd</DependentUpon>
     </None>

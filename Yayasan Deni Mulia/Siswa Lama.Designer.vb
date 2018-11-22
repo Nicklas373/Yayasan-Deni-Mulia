@@ -125,7 +125,7 @@ Partial Class Siswa_Lama
         Me.DataGridView1.Location = New System.Drawing.Point(220, 243)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(743, 347)
+        Me.DataGridView1.Size = New System.Drawing.Size(743, 265)
         Me.DataGridView1.TabIndex = 16
         '
         'NISDataGridViewTextBoxColumn
@@ -195,7 +195,7 @@ Partial Class Siswa_Lama
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(838, 624)
+        Me.Button2.Location = New System.Drawing.Point(837, 549)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 45)
         Me.Button2.TabIndex = 18
@@ -206,7 +206,7 @@ Partial Class Siswa_Lama
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(220, 624)
+        Me.Button1.Location = New System.Drawing.Point(219, 549)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 17
@@ -217,7 +217,7 @@ Partial Class Siswa_Lama
         '
         Me.Button4.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(526, 624)
+        Me.Button4.Location = New System.Drawing.Point(525, 549)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(115, 45)
         Me.Button4.TabIndex = 19
@@ -230,7 +230,7 @@ Partial Class Siswa_Lama
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1163, 681)
+        Me.ClientSize = New System.Drawing.Size(1163, 596)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

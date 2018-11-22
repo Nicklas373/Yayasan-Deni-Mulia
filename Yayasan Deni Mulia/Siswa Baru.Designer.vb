@@ -89,7 +89,7 @@ Partial Class Siswa_Baru
         Me.DataGridView1.Location = New System.Drawing.Point(12, 244)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1145, 374)
+        Me.DataGridView1.Size = New System.Drawing.Size(1145, 250)
         Me.DataGridView1.TabIndex = 3
         '
         'NAMADataGridViewTextBoxColumn
@@ -186,7 +186,7 @@ Partial Class Siswa_Baru
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Location = New System.Drawing.Point(213, 624)
+        Me.Button1.Location = New System.Drawing.Point(215, 525)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 4
@@ -196,7 +196,7 @@ Partial Class Siswa_Baru
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button2.Location = New System.Drawing.Point(775, 624)
+        Me.Button2.Location = New System.Drawing.Point(777, 525)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 45)
         Me.Button2.TabIndex = 5
@@ -243,7 +243,7 @@ Partial Class Siswa_Baru
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button4.Location = New System.Drawing.Point(494, 624)
+        Me.Button4.Location = New System.Drawing.Point(496, 525)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(115, 45)
         Me.Button4.TabIndex = 10
@@ -256,7 +256,7 @@ Partial Class Siswa_Baru
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1163, 681)
+        Me.ClientSize = New System.Drawing.Size(1163, 572)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
