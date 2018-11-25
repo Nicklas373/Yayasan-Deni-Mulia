@@ -35,6 +35,7 @@ Partial Class TampilData
         Me.DataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataDataSet1 = New Yayasan_Deni_Mulia.DataDataSet1()
         Me.DataTableAdapter = New Yayasan_Deni_Mulia.DataDataSet1TableAdapters.DataTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,10 +50,10 @@ Partial Class TampilData
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NISDataGridViewTextBoxColumn, Me.NAMADataGridViewTextBoxColumn, Me.JURUSANDataGridViewTextBoxColumn, Me.KELASDataGridViewTextBoxColumn, Me.EKSKULDataGridViewTextBoxColumn, Me.STATUSDataGridViewTextBoxColumn, Me.BIAYADataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.DataBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(42, 60)
+        Me.DataGridView1.Location = New System.Drawing.Point(42, 93)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(746, 385)
+        Me.DataGridView1.Size = New System.Drawing.Size(746, 352)
         Me.DataGridView1.TabIndex = 0
         '
         'NISDataGridViewTextBoxColumn
@@ -118,6 +119,18 @@ Partial Class TampilData
         '
         Me.DataTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(163, 37)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Daftar Siswa"
+        '
         'TampilData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,6 +138,7 @@ Partial Class TampilData
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(819, 457)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TampilData"
@@ -133,6 +147,7 @@ Partial Class TampilData
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -147,4 +162,5 @@ Partial Class TampilData
     Friend WithEvents EKSKULDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents STATUSDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BIAYADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
 End Class

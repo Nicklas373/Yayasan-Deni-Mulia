@@ -31,15 +31,17 @@ Partial Class Konfirmasi
         'OK_Button
         '
         resources.ApplyResources(Me.OK_Button, "OK_Button")
-        Me.OK_Button.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.OK_Button.BackColor = System.Drawing.Color.Purple
+        Me.OK_Button.ForeColor = System.Drawing.Color.White
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.UseVisualStyleBackColor = False
         '
         'Cancel_Button
         '
         resources.ApplyResources(Me.Cancel_Button, "Cancel_Button")
-        Me.Cancel_Button.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Cancel_Button.BackColor = System.Drawing.Color.Purple
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel_Button.ForeColor = System.Drawing.Color.White
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.UseVisualStyleBackColor = False
         '
@@ -47,6 +49,7 @@ Partial Class Konfirmasi
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Name = "Label1"
         '
         'Konfirmasi

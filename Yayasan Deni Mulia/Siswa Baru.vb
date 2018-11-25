@@ -62,9 +62,9 @@ Public Class Siswa_Baru
         Dim dr As SqlDataReader
         dr = cmd.ExecuteReader()
         If (dr.HasRows) Then
-            MessageBox.Show("Data anda ditemukan")
+            MsgBox("Data anda ditemukan", MsgBoxStyle.Information)
         Else
-            MessageBox.Show("Data anda tidak ditemukan")
+            MsgBox("Data anda tidak ditemukan", MsgBoxStyle.Critical)
             con.Close()
         End If
         Return 0
@@ -74,7 +74,7 @@ Public Class Siswa_Baru
         If IsNumeric(TextBox1.Text) Then
             CekData.Show()
         Else
-            MsgBox("Harap Masukkan NIS anda")
+            MsgBox("Harap Masukkan NIS anda", MsgBoxStyle.Critical)
         End If
     End Sub
 
@@ -82,7 +82,7 @@ Public Class Siswa_Baru
         If TextBox1.Text.Length >= 8 Then
             If e.KeyChar <> ControlChars.Back Then
                 e.Handled = True
-                MsgBox("Harap masukkan NIS kurang dari 8 digit")
+                MsgBox("Harap masukkan NIS kurang dari 8 digit", MsgBoxStyle.Critical)
                 TextBox1.Clear()
                 TextBox1.Focus()
             End If

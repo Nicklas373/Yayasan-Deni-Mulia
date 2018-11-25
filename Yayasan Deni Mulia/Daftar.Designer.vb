@@ -78,6 +78,7 @@ Partial Class Daftar
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.BackColor = System.Drawing.Color.Transparent
+        Me.RadioButton4.ForeColor = System.Drawing.Color.White
         Me.RadioButton4.Location = New System.Drawing.Point(440, 264)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(170, 17)
@@ -96,7 +97,8 @@ Partial Class Daftar
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button3.BackColor = System.Drawing.Color.Purple
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(670, 182)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(76, 23)
@@ -116,6 +118,7 @@ Partial Class Daftar
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.BackColor = System.Drawing.Color.Transparent
+        Me.RadioButton3.ForeColor = System.Drawing.Color.White
         Me.RadioButton3.Location = New System.Drawing.Point(440, 240)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(72, 17)
@@ -128,6 +131,7 @@ Partial Class Daftar
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.BackColor = System.Drawing.Color.Transparent
+        Me.RadioButton2.ForeColor = System.Drawing.Color.White
         Me.RadioButton2.Location = New System.Drawing.Point(274, 264)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(75, 17)
@@ -140,6 +144,7 @@ Partial Class Daftar
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.BackColor = System.Drawing.Color.Transparent
+        Me.RadioButton1.ForeColor = System.Drawing.Color.White
         Me.RadioButton1.Location = New System.Drawing.Point(274, 240)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(141, 17)
@@ -161,6 +166,7 @@ Partial Class Daftar
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(40, 331)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(73, 25)
@@ -172,6 +178,7 @@ Partial Class Daftar
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(40, 233)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 25)
@@ -199,6 +206,7 @@ Partial Class Daftar
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(40, 361)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(67, 25)
@@ -207,22 +215,24 @@ Partial Class Daftar
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.Purple
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(493, 426)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(493, 441)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(117, 65)
+        Me.Button2.Size = New System.Drawing.Size(117, 50)
         Me.Button2.TabIndex = 70
         Me.Button2.Text = "Tutup"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(156, 426)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(156, 441)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 65)
+        Me.Button1.Size = New System.Drawing.Size(114, 50)
         Me.Button1.TabIndex = 69
         Me.Button1.Text = "Daftar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -267,6 +277,7 @@ Partial Class Daftar
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(40, 296)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 25)
@@ -278,6 +289,7 @@ Partial Class Daftar
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(40, 198)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 25)
@@ -289,6 +301,7 @@ Partial Class Daftar
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(40, 162)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 25)
@@ -300,6 +313,7 @@ Partial Class Daftar
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(40, 124)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(212, 25)
@@ -311,6 +325,7 @@ Partial Class Daftar
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(40, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(147, 25)
@@ -322,7 +337,8 @@ Partial Class Daftar
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(293, 21)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(2, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(250, 37)
         Me.Label1.TabIndex = 58
@@ -457,6 +473,7 @@ Partial Class Daftar
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(640, 104)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(137, 25)

@@ -48,12 +48,14 @@ Partial Class Form1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Name = "Label1"
         '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Name = "Label2"
         '
         'PictureBox2
@@ -65,22 +67,26 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
         resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.Purple
         resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Name = "Button2"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button3.BackColor = System.Drawing.Color.Purple
         resources.ApplyResources(Me.Button3, "Button3")
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Name = "Button3"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -88,11 +94,12 @@ Partial Class Form1
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Name = "Label3"
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MenuStrip1.BackColor = System.Drawing.Color.DarkMagenta
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CekDataSiswaToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem})
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -100,6 +107,7 @@ Partial Class Form1
         'CekDataSiswaToolStripMenuItem
         '
         Me.CekDataSiswaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SiswaBaruToolStripMenuItem, Me.SiswaLamaToolStripMenuItem})
+        Me.CekDataSiswaToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray
         resources.ApplyResources(Me.CekDataSiswaToolStripMenuItem, "CekDataSiswaToolStripMenuItem")
         Me.CekDataSiswaToolStripMenuItem.Name = "CekDataSiswaToolStripMenuItem"
         '
@@ -116,6 +124,7 @@ Partial Class Form1
         'TentangAplikasiToolStripMenuItem
         '
         Me.TentangAplikasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TentangKamiToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem1})
+        Me.TentangAplikasiToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray
         Me.TentangAplikasiToolStripMenuItem.Name = "TentangAplikasiToolStripMenuItem"
         resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem, "TentangAplikasiToolStripMenuItem")
         '

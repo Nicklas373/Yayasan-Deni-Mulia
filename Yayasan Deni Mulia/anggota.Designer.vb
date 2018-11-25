@@ -48,8 +48,6 @@ Partial Class anggota
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -63,7 +61,6 @@ Partial Class anggota
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -71,11 +68,12 @@ Partial Class anggota
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(383, 9)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(217, 45)
+        Me.Label1.Size = New System.Drawing.Size(371, 45)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Data Anggota"
+        Me.Label1.Text = "Data Anggota Kelompok"
         '
         'PictureBox1
         '
@@ -89,10 +87,11 @@ Partial Class anggota
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox1.BackColor = System.Drawing.Color.Gray
         Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 304)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 121)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(391, 158)
         Me.GroupBox1.TabIndex = 3
@@ -101,7 +100,7 @@ Partial Class anggota
         '
         'GroupBox5
         '
-        Me.GroupBox5.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox5.BackColor = System.Drawing.Color.LightGray
         Me.GroupBox5.Controls.Add(Me.Label4)
         Me.GroupBox5.Controls.Add(Me.Label3)
         Me.GroupBox5.Controls.Add(Me.Label2)
@@ -115,6 +114,7 @@ Partial Class anggota
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(6, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(231, 21)
@@ -125,6 +125,7 @@ Partial Class anggota
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(6, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 21)
@@ -135,6 +136,7 @@ Partial Class anggota
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(6, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(139, 21)
@@ -143,10 +145,11 @@ Partial Class anggota
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox2.BackColor = System.Drawing.Color.Gray
         Me.GroupBox2.Controls.Add(Me.GroupBox6)
         Me.GroupBox2.Controls.Add(Me.PictureBox3)
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 491)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
+        Me.GroupBox2.Location = New System.Drawing.Point(38, 308)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(385, 158)
         Me.GroupBox2.TabIndex = 4
@@ -155,7 +158,7 @@ Partial Class anggota
         '
         'GroupBox6
         '
-        Me.GroupBox6.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox6.BackColor = System.Drawing.Color.LightGray
         Me.GroupBox6.Controls.Add(Me.Label5)
         Me.GroupBox6.Controls.Add(Me.Label6)
         Me.GroupBox6.Controls.Add(Me.Label7)
@@ -169,6 +172,7 @@ Partial Class anggota
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(6, 80)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(174, 21)
@@ -179,6 +183,7 @@ Partial Class anggota
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(6, 47)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(109, 21)
@@ -189,6 +194,7 @@ Partial Class anggota
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(6, 16)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(132, 21)
@@ -207,10 +213,11 @@ Partial Class anggota
         '
         'GroupBox4
         '
-        Me.GroupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox4.BackColor = System.Drawing.Color.Gray
         Me.GroupBox4.Controls.Add(Me.GroupBox8)
         Me.GroupBox4.Controls.Add(Me.PictureBox4)
-        Me.GroupBox4.Location = New System.Drawing.Point(531, 491)
+        Me.GroupBox4.ForeColor = System.Drawing.Color.White
+        Me.GroupBox4.Location = New System.Drawing.Point(541, 308)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(391, 158)
         Me.GroupBox4.TabIndex = 4
@@ -219,7 +226,7 @@ Partial Class anggota
         '
         'GroupBox8
         '
-        Me.GroupBox8.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox8.BackColor = System.Drawing.Color.LightGray
         Me.GroupBox8.Controls.Add(Me.Label11)
         Me.GroupBox8.Controls.Add(Me.Label12)
         Me.GroupBox8.Controls.Add(Me.Label13)
@@ -233,6 +240,7 @@ Partial Class anggota
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(6, 80)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(99, 21)
@@ -243,6 +251,7 @@ Partial Class anggota
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(6, 47)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(109, 21)
@@ -253,6 +262,7 @@ Partial Class anggota
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.Location = New System.Drawing.Point(6, 16)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(138, 21)
@@ -271,10 +281,11 @@ Partial Class anggota
         '
         'GroupBox3
         '
-        Me.GroupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox3.BackColor = System.Drawing.Color.Gray
         Me.GroupBox3.Controls.Add(Me.GroupBox7)
         Me.GroupBox3.Controls.Add(Me.PictureBox2)
-        Me.GroupBox3.Location = New System.Drawing.Point(531, 304)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.GroupBox3.Location = New System.Drawing.Point(541, 121)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(391, 158)
         Me.GroupBox3.TabIndex = 4
@@ -283,7 +294,7 @@ Partial Class anggota
         '
         'GroupBox7
         '
-        Me.GroupBox7.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox7.BackColor = System.Drawing.Color.LightGray
         Me.GroupBox7.Controls.Add(Me.Label8)
         Me.GroupBox7.Controls.Add(Me.Label9)
         Me.GroupBox7.Controls.Add(Me.Label10)
@@ -297,6 +308,7 @@ Partial Class anggota
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(6, 80)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(185, 21)
@@ -307,6 +319,7 @@ Partial Class anggota
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(6, 47)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(109, 21)
@@ -317,6 +330,7 @@ Partial Class anggota
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(6, 16)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(141, 21)
@@ -333,33 +347,12 @@ Partial Class anggota
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(211, 54)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(565, 45)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "Kelompok Aplikasi Yayasan Deni Mulia"
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(391, 120)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(170, 155)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 6
-        Me.PictureBox5.TabStop = False
-        '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(419, 647)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(805, 575)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 42)
         Me.Button1.TabIndex = 7
@@ -372,10 +365,8 @@ Partial Class anggota
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(944, 689)
+        Me.ClientSize = New System.Drawing.Size(944, 629)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
@@ -400,7 +391,6 @@ Partial Class anggota
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -431,7 +421,5 @@ Partial Class anggota
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Button1 As Button
 End Class
