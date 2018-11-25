@@ -4,16 +4,16 @@ Imports System.IO
 
 Public Class Pembayaran
     Dim rb As String
-    Dim rb2 As Double
+    Dim rb2 As Integer
     Dim S1 As String = "Belum Lunas"
     Dim S2 As String = "Sudah Lunas"
     Dim S3 As String = "Belum Daftar Ulang"
     Dim S4 As String = "Sudah Daftar Ulang"
-    Dim biaya As Double = "0"
-    Dim AK As Double = "2,700,000"
-    Dim TKJ As Double = "2,900,000"
-    Dim AP As Double = "3,000,000"
-    Dim MM As Double = "3,850,000"
+    Dim biaya As Integer = "0"
+    Dim AK As Integer = "2700000"
+    Dim TKJ As Integer = "2900000"
+    Dim AP As Integer = "3000000"
+    Dim MM As Integer = "3850000"
     Dim kelas As String = "1"
     Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Sekolah").ConnectionString
     Dim con = New SqlConnection(cons)
@@ -209,11 +209,11 @@ Public Class Pembayaran
                     cmd2.ExecuteNonQuery()
                     con2.Close()
                     trf()
-                    MessageBox.Show("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia")
+                    MsgBox("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia", MsgBoxStyle.Information)
                     Konfirmasi.Show()
                 ElseIf total = bayar Then
                     hasil = bayar
-                    MessageBox.Show("Pembayaran telah berhasil " + vbCrLf + "Saldo pembayaran sebesar :  " + "Rp. " + total)
+                    MsgBox("Pembayaran telah berhasil " + vbCrLf + "Saldo pembayaran sebesar :  " + "Rp. " + total, MsgBoxStyle.Information)
                     con.open()
                     Dim updateQuery As String = "UPDATE dbo.Sekolah SET dbo.Sekolah.STATUS = @status WHERE Sekolah.NIS = @nis"
                     Using cmd3 As New SqlCommand(updateQuery, con)
@@ -235,25 +235,25 @@ Public Class Pembayaran
                     cmd2.ExecuteNonQuery()
                     con2.Close()
                     trf()
-                    MessageBox.Show("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia")
+                    MsgBox("Anda sudah menyelesaikan pembayaran" + vbCrLf + "Selamat datang di Sekolah Yayasan Deni Mulia", MsgBoxStyle.Information)
                     Konfirmasi.Show()
                 ElseIf total < bayar Then
                     con.close()
                     hasil = total - bayar
-                    MessageBox.Show("Anda membayar sebesar : " + total + vbCrLf + "Uang anda kurang sebesar : " + " " + "Rp. " + Format(hasil, "#,###,##0") + vbCrLf + "Pembayaran ditunda")
-                    MessageBox.Show("Harap Selesaikan Pembayaran Anda")
+                    MsgBox("Anda membayar sebesar : " + total + vbCrLf + "Uang anda kurang sebesar : " + " " + "Rp. " + Format(hasil, "#,###,##0") + vbCrLf + "Pembayaran ditunda", MsgBoxStyle.Critical)
+                    MsgBox("Harap Selesaikan Pembayaran Anda", MsgBoxStyle.Critical)
                 Else
                     con.close()
                 End If
             ElseIf S2 = Label12.Text Then
                 con.close()
-                MessageBox.Show("Anda sudah mendaftar ulang")
+                MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)
             Else
                 con.close()
             End If
         Else
             con.close()
-            MessageBox.Show("Data anda tidak ditemukan")
+            MsgBox("Data anda tidak ditemukan", MsgBoxStyle.Critical)
         End If
     End Sub
 

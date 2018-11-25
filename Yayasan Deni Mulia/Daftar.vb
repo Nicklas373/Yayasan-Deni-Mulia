@@ -4,13 +4,13 @@ Imports System.IO
 
 Public Class Daftar
     Dim rb As String
-    Dim rb2 As Double
+    Dim rb2 As Integer
     Dim S1 As String = "Belum Lunas"
     Dim S2 As String = "Sudah Lunas"
-    Dim AK As Double = "2,700,000"
-    Dim TKJ As Double = "2,900,000"
-    Dim AP As Double = "3,000,000"
-    Dim MM As Double = "3,850,000"
+    Dim AK As Integer = "2700000"
+    Dim TKJ As Integer = "2900000"
+    Dim AP As Integer = "3000000"
+    Dim MM As Integer = "3850000"
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
@@ -39,7 +39,7 @@ Public Class Daftar
                 Jurusan()
                 register()
             Else
-                MessageBox.Show("Anda tidak memasukkan foto")
+                MsgBox("Anda tidak memasukkan foto", MsgBoxStyle.Information)
                 register()
             End If
         End If
@@ -66,11 +66,11 @@ Public Class Daftar
             cmd2.Parameters.Add("@biaya", SqlDbType.Decimal).Value = rb2
             cmd2.Parameters.Add("@status", SqlDbType.NVarChar).Value = S1
             cmd2.ExecuteNonQuery()
-            MessageBox.Show("Data anda telah di input")
+            MsgBox("Data anda telah di input", MsgBoxStyle.Information)
             con.Close()
             Pembayaran.Show()
         Else
-            MessageBox.Show("Harap isi NIS anda dengan angka & Harap isi jurusan anda")
+            MsgBox("Harap isi NIS anda dengan angka & Harap isi jurusan anda", MsgBoxStyle.Critical)
             TextBox3.Text = ""
         End If
         Return 0
@@ -294,24 +294,35 @@ Public Class Daftar
     Private Sub cekdata()
         Label11.Text = DataGridView1.Item(10, DataGridView1.CurrentRow.Index).Value
         If S1 = Label11.Text Then
-            MessageBox.Show("Anda sudah terdaftar" + vbCrLf + "namun anda belum melunasi pembayaran")
+            MsgBox("Anda sudah terdaftar" + vbCrLf + "namun anda belum melunasi pembayaran", MsgBoxStyle.Information)
             Pembayaran.Show()
         ElseIf S2 = Label11.Text Then
-            MessageBox.Show("Anda sudah terdaftar" + vbCrLf + "Anda sudah melunasi pembayaran")
-            MessageBox.Show("Silahkan mendaftar ulang")
+            MsgBox("Anda sudah terdaftar" + vbCrLf + "Anda sudah melunasi pembayaran", MsgBoxStyle.Information)
+            MsgBox("Silahkan mendaftar ulang", MsgBoxStyle.Information)
             Daftar_Ulang.Show()
             Me.Close()
         Else
-            MessageBox.Show("Anda sudah terdaftar")
+            MsgBox("Anda sudah terdaftar", MsgBoxStyle.Information)
             TextBox1.Text = ""
             TextBox2.Text = ""
             TextBox3.Text = ""
             TextBox4.Text = ""
             TextBox5.Text = ""
             TextBox6.Text = ""
-            MessageBox.Show("Silahkan mendaftar ulang")
+            MsgBox("Silahkan mendaftar ulang", MsgBoxStyle.Information)
             Me.Close()
             Form1.Show()
+        End If
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+        If TextBox3.Text.Length >= 8 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MsgBox("Harap masukkan NIS kurang dari 8 digit", MsgBoxStyle.Critical)
+                TextBox3.Clear()
+                TextBox3.Focus()
+            End If
         End If
     End Sub
 End Class

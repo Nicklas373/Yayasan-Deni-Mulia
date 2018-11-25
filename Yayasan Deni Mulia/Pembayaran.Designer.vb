@@ -61,22 +61,22 @@ Partial Class Pembayaran
         Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BIAYADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.STATUSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SekolahBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahDataSet3 = New Yayasan_Deni_Mulia.SekolahDataSet3()
         Me.SekolahBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SekolahDataSet1 = New Yayasan_Deni_Mulia.SekolahDataSet1()
         Me.SekolahTableAdapter = New Yayasan_Deni_Mulia.SekolahDataSet1TableAdapters.SekolahTableAdapter()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.SekolahDataSet3 = New Yayasan_Deni_Mulia.SekolahDataSet3()
-        Me.SekolahBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.SekolahTableAdapter1 = New Yayasan_Deni_Mulia.SekolahDataSet3TableAdapters.SekolahTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GambarDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -103,7 +103,8 @@ Partial Class Pembayaran
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(331, 9)
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(12, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(163, 37)
         Me.Label14.TabIndex = 63
@@ -111,8 +112,9 @@ Partial Class Pembayaran
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.Purple
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(515, 430)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(81, 34)
@@ -122,8 +124,9 @@ Partial Class Pembayaran
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(226, 430)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(81, 34)
@@ -143,6 +146,7 @@ Partial Class Pembayaran
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(395, 347)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(38, 25)
@@ -154,6 +158,7 @@ Partial Class Pembayaran
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(192, 347)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(190, 25)
@@ -165,6 +170,7 @@ Partial Class Pembayaran
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(439, 306)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 25)
@@ -176,6 +182,7 @@ Partial Class Pembayaran
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(395, 306)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(38, 25)
@@ -187,6 +194,7 @@ Partial Class Pembayaran
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(192, 306)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(170, 25)
@@ -198,6 +206,7 @@ Partial Class Pembayaran
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(299, 198)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 25)
@@ -209,6 +218,7 @@ Partial Class Pembayaran
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(299, 163)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 25)
@@ -220,6 +230,7 @@ Partial Class Pembayaran
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(299, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(67, 25)
@@ -231,6 +242,7 @@ Partial Class Pembayaran
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(196, 198)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 25)
@@ -242,6 +254,7 @@ Partial Class Pembayaran
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(196, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 25)
@@ -253,6 +266,7 @@ Partial Class Pembayaran
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(196, 128)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(71, 25)
@@ -408,6 +422,16 @@ Partial Class Pembayaran
         Me.STATUSDataGridViewTextBoxColumn.Name = "STATUSDataGridViewTextBoxColumn"
         Me.STATUSDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'SekolahBindingSource1
+        '
+        Me.SekolahBindingSource1.DataMember = "Sekolah"
+        Me.SekolahBindingSource1.DataSource = Me.SekolahDataSet3
+        '
+        'SekolahDataSet3
+        '
+        Me.SekolahDataSet3.DataSetName = "SekolahDataSet3"
+        Me.SekolahDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'SekolahBindingSource
         '
         Me.SekolahBindingSource.DataMember = "Sekolah"
@@ -427,21 +451,12 @@ Partial Class Pembayaran
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
         Me.Label13.Location = New System.Drawing.Point(27, 174)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(132, 25)
         Me.Label13.TabIndex = 66
         Me.Label13.Text = "Tidak ada foto"
-        '
-        'SekolahDataSet3
-        '
-        Me.SekolahDataSet3.DataSetName = "SekolahDataSet3"
-        Me.SekolahDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SekolahBindingSource1
-        '
-        Me.SekolahBindingSource1.DataMember = "Sekolah"
-        Me.SekolahBindingSource1.DataSource = Me.SekolahDataSet3
         '
         'SekolahTableAdapter1
         '
@@ -482,10 +497,10 @@ Partial Class Pembayaran
         CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GambarDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SekolahDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

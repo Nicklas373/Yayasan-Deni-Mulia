@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,6 +38,8 @@ Partial Class Form1
         Me.TentangAplikasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TentangKamiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TentangAplikasiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -45,12 +48,14 @@ Partial Class Form1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Name = "Label1"
         '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Name = "Label2"
         '
         'PictureBox2
@@ -62,22 +67,26 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
         resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.Purple
         resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Name = "Button2"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button3.BackColor = System.Drawing.Color.Purple
         resources.ApplyResources(Me.Button3, "Button3")
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Name = "Button3"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -85,11 +94,12 @@ Partial Class Form1
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Name = "Label3"
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MenuStrip1.BackColor = System.Drawing.Color.DarkMagenta
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CekDataSiswaToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem})
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -97,6 +107,7 @@ Partial Class Form1
         'CekDataSiswaToolStripMenuItem
         '
         Me.CekDataSiswaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SiswaBaruToolStripMenuItem, Me.SiswaLamaToolStripMenuItem})
+        Me.CekDataSiswaToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray
         resources.ApplyResources(Me.CekDataSiswaToolStripMenuItem, "CekDataSiswaToolStripMenuItem")
         Me.CekDataSiswaToolStripMenuItem.Name = "CekDataSiswaToolStripMenuItem"
         '
@@ -113,6 +124,7 @@ Partial Class Form1
         'TentangAplikasiToolStripMenuItem
         '
         Me.TentangAplikasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TentangKamiToolStripMenuItem, Me.TentangAplikasiToolStripMenuItem1})
+        Me.TentangAplikasiToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray
         Me.TentangAplikasiToolStripMenuItem.Name = "TentangAplikasiToolStripMenuItem"
         resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem, "TentangAplikasiToolStripMenuItem")
         '
@@ -126,10 +138,21 @@ Partial Class Form1
         Me.TentangAplikasiToolStripMenuItem1.Name = "TentangAplikasiToolStripMenuItem1"
         resources.ApplyResources(Me.TentangAplikasiToolStripMenuItem1, "TentangAplikasiToolStripMenuItem1")
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 50
+        '
+        'ProgressBar1
+        '
+        resources.ApplyResources(Me.ProgressBar1, "ProgressBar1")
+        Me.ProgressBar1.Name = "ProgressBar1"
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -162,4 +185,6 @@ Partial Class Form1
     Friend WithEvents TentangAplikasiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TentangKamiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TentangAplikasiToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

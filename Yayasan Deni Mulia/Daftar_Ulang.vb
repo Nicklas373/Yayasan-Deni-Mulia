@@ -11,30 +11,30 @@ Public Class Daftar_Ulang
     Dim A As String = "1"
     Dim B As String = "2"
     Dim C As String = "3"
-    Dim AP1 As Double = "1,200,000"
-    Dim ap11 As String = "satu juta dua ratus ribu rupiah"
-    Dim AP2 As Double = "1,100,000"
-    Dim ap22 As String = "satu juta seratus ribu rupiah"
-    Dim AP3 As Double = "1,000,000"
-    Dim ap33 As String = "satu juta rupiah"
-    Dim MM1 As Double = "1,800,000"
-    Dim mm11 As String = "satu juta delapan ratus ribu rupiah"
-    Dim MM2 As Double = "1,600,000"
-    Dim mm22 As String = "satu juta enam ratus ribu rupiah"
-    Dim MM3 As Double = "1,400,000"
-    Dim mm33 As String = "satu juta empat ratus ribu rupiah"
-    Dim AK1 As Double = "1,100,000"
-    Dim ak11 As String = "satu juta seratus ribut rupiah"
-    Dim AK2 As Double = "1,000,000"
-    Dim ak22 As String = "satu juta rupiah"
-    Dim AK3 As Double = "950,000"
-    Dim ak33 As String = "sembilan ratus lima puluh ribu rupiah"
-    Dim TKJ1 As Double = "1,000,000"
-    Dim tkj11 As String = "satu juta rupiah"
-    Dim TKJ2 As Double = "950,000"
-    Dim tkj22 As String = "sembilan ratus lima puluh ribu rupiah"
-    Dim TKJ3 As Double = "925,000"
-    Dim tkj33 As String = "sembilan ratus dua puluh lima ribu rupiah"
+    Dim AP1 As Integer = "1200000"
+    Dim ap11 As String = "( satu juta dua ratus ribu rupiah )"
+    Dim AP2 As Integer = "1100000"
+    Dim ap22 As String = "( satu juta seratus ribu rupiah )"
+    Dim AP3 As Integer = "1000000"
+    Dim ap33 As String = "( satu juta rupiah )"
+    Dim MM1 As Integer = "1800000"
+    Dim mm11 As String = "( satu juta delapan ratus ribu rupiah )"
+    Dim MM2 As Integer = "1600000"
+    Dim mm22 As String = "( satu juta enam ratus ribu rupiah )"
+    Dim MM3 As Integer = "1400000"
+    Dim mm33 As String = "( satu juta empat ratus ribu rupiah )"
+    Dim AK1 As Integer = "1100000"
+    Dim ak11 As String = "( satu juta seratus ribut rupiah )"
+    Dim AK2 As Integer = "1000000"
+    Dim ak22 As String = "( satu juta rupiah )"
+    Dim AK3 As Integer = "950000"
+    Dim ak33 As String = "( sembilan ratus lima puluh ribu rupiah )"
+    Dim TKJ1 As Integer = "1000000"
+    Dim tkj11 As String = "( satu juta rupiah )"
+    Dim TKJ2 As Integer = "950000"
+    Dim tkj22 As String = "( sembilan ratus lima puluh ribu rupiah )"
+    Dim TKJ3 As Integer = "925000"
+    Dim tkj33 As String = "( sembilan ratus dua puluh lima ribu rupiah )"
     Dim AK As String = "Akuntansi"
     Dim TKJ As String = "Teknik Komputer dan Jaringan"
     Dim MM As String = "Multimedia"
@@ -51,7 +51,7 @@ Public Class Daftar_Ulang
         Label9.Visible = False
         Label10.Visible = False
         Label11.Visible = False
-        GroupBox1.Visible = False
+        Label12.Visible = False
         ComboBox1.Items.Add("1")
         ComboBox1.Items.Add("2")
         ComboBox1.Items.Add("3")
@@ -85,24 +85,29 @@ Public Class Daftar_Ulang
     End Function
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        FilterData(TextBox2.Text)
-        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
-        Dim con = New SqlConnection(cons)
-        Dim query As String = "select NIS from Data where NIS=@NIS"
-        con.Open()
-        cmd = New SqlCommand(query, con)
-        cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
-        Dim dr As SqlDataReader
-        dr = cmd.ExecuteReader()
-        If (dr.HasRows) Then
-            MessageBox.Show("Data anda ditemukan")
-            Daftar()
-            con.Close()
+        checknama()
+        Label8.Text = DataGridView2.Item(5, DataGridView2.CurrentRow.Index).Value
+        If S1 = Label8.Text Then
+            FilterData(TextBox2.Text)
+            Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+            Dim con = New SqlConnection(cons)
+            Dim query As String = "select NIS from Data where NIS=@NIS"
+            con.Open()
+            cmd = New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
+            Dim dr As SqlDataReader
+            dr = cmd.ExecuteReader()
+            If (dr.HasRows) Then
+                MsgBox("Data anda ditemukan", MsgBoxStyle.Information)
+                Daftar()
+                con.Close()
+            Else
+                MsgBox("Data anda tidak ditemukan", MsgBoxStyle.Critical)
+                con.Close()
+            End If
         Else
-            MessageBox.Show("Data anda tidak ditemukan")
-            con.Close()
+            MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)
         End If
-        con.Close()
     End Sub
 
     Private Function Daftar()
@@ -116,7 +121,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = AK2
@@ -125,7 +129,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = AK3
@@ -134,9 +137,8 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             Else
-                MsgBox("Data Invalid")
+                MsgBox("Data Invalid", MsgBoxStyle.Critical)
             End If
         ElseIf Label7.Text = AP Then
             If ComboBox1.SelectedText = A Then
@@ -147,7 +149,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = AP2
@@ -156,7 +157,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = AP3
@@ -165,7 +165,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             Else
                 MsgBox("Data Invalid")
             End If
@@ -178,7 +177,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = MM2
@@ -187,7 +185,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = MM3
@@ -196,9 +193,8 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             Else
-                MsgBox("Data Invalid")
+                MsgBox("Data Invalid", MsgBoxStyle.Critical)
             End If
         ElseIf Label7.Text = TKJ Then
             If ComboBox1.SelectedText = A Then
@@ -209,7 +205,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = B Then
                 KLS = B
                 Label9.Text = TKJ2
@@ -218,7 +213,6 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             ElseIf ComboBox1.SelectedText = C Then
                 KLS = C
                 Label9.Text = TKJ3
@@ -227,12 +221,11 @@ Public Class Daftar_Ulang
                 Label6.Visible = True
                 Label10.Visible = True
                 Label11.Visible = True
-                GroupBox1.Visible = True
             Else
-                MsgBox("Data Invalid")
+                MsgBox("Data Invalid", MsgBoxStyle.Critical)
             End If
         Else
-            MsgBox("Data Invalid")
+            MsgBox("Data Invalid", MsgBoxStyle.Critical)
         End If
         Return 0
     End Function
@@ -255,7 +248,6 @@ Public Class Daftar_Ulang
         If S1 = Label8.Text Then
             Dim harga As Double
             harga = CDbl(Label9.Text)
-            MessageBox.Show("anda belum mendaftar ulang, silahkan mendaftar ulang")
             Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
             Dim con = New SqlConnection(cons)
             Dim bayar As Double
@@ -292,7 +284,7 @@ Public Class Daftar_Ulang
                     cmd.ExecuteNonQuery()
                     con.Close()
                 End Using
-                MessageBox.Show("Terima Kasih Telah" + vbCrLf + "Telah Melakukan Daftar Ulang")
+                MsgBox("Terima Kasih Telah Mendaftar Ulang", MsgBoxStyle.Information)
                 TampilData.Show()
             ElseIf bayar <= harga Then
                 con.Close()
@@ -302,9 +294,30 @@ Public Class Daftar_Ulang
                 con.Close()
             End If
         ElseIf S2 = Label8.Text Then
-            MessageBox.Show("Anda sudah mendaftar ulang")
+            MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)
         Else
-            MsgBox("Data Invalid")
+            MsgBox("Data Invalid", MsgBoxStyle.Critical)
         End If
     End Sub
+
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+        If TextBox2.Text.Length >= 8 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+                MsgBox("Harap masukkan NIS kurang dari 8 digit", MsgBoxStyle.Critical)
+                TextBox2.Clear()
+                TextBox2.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Function checknama()
+        Label12.Text = DataGridView2.Item(1, DataGridView2.CurrentRow.Index).Value
+        If TextBox1.Text = Label12.Text Then
+
+        Else
+            TextBox1.Text = Label12.Text
+        End If
+        Return 0
+    End Function
 End Class

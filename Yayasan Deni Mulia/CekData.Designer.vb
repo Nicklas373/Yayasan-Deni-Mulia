@@ -28,21 +28,21 @@ Partial Class CekData
         Me.SekolahBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SekolahTableAdapter = New Yayasan_Deni_Mulia.SekolahTableAdapters.SekolahTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TransferDataSet = New Yayasan_Deni_Mulia.TransferDataSet()
-        Me.TransferBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TransferTableAdapter = New Yayasan_Deni_Mulia.TransferDataSetTableAdapters.TransferTableAdapter()
         Me.NISDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TRFDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TransferBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransferDataSet = New Yayasan_Deni_Mulia.TransferDataSet()
+        Me.TransferTableAdapter = New Yayasan_Deni_Mulia.TransferDataSetTableAdapters.TransferTableAdapter()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.GambarDataSet = New Yayasan_Deni_Mulia.GambarDataSet()
-        Me.GambarDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GambarDataSet2 = New Yayasan_Deni_Mulia.GambarDataSet2()
-        Me.GambarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GambarTableAdapter = New Yayasan_Deni_Mulia.GambarDataSet2TableAdapters.GambarTableAdapter()
         Me.NISDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FileNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageDataDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.FileTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GambarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GambarDataSet2 = New Yayasan_Deni_Mulia.GambarDataSet2()
+        Me.GambarDataSet = New Yayasan_Deni_Mulia.GambarDataSet()
+        Me.GambarDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GambarTableAdapter = New Yayasan_Deni_Mulia.GambarDataSet2TableAdapters.GambarTableAdapter()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.NAMADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TEMPATDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -82,13 +82,13 @@ Partial Class CekData
         CType(Me.Sekolah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransferDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransferBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransferDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GambarDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GambarDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GambarDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GambarDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -122,20 +122,6 @@ Partial Class CekData
         Me.DataGridView1.Size = New System.Drawing.Size(10, 13)
         Me.DataGridView1.TabIndex = 0
         '
-        'TransferDataSet
-        '
-        Me.TransferDataSet.DataSetName = "TransferDataSet"
-        Me.TransferDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TransferBindingSource
-        '
-        Me.TransferBindingSource.DataMember = "Transfer"
-        Me.TransferBindingSource.DataSource = Me.TransferDataSet
-        '
-        'TransferTableAdapter
-        '
-        Me.TransferTableAdapter.ClearBeforeFill = True
-        '
         'NISDataGridViewTextBoxColumn
         '
         Me.NISDataGridViewTextBoxColumn.DataPropertyName = "NIS"
@@ -149,6 +135,20 @@ Partial Class CekData
         Me.TRFDataGridViewTextBoxColumn.HeaderText = "TRF"
         Me.TRFDataGridViewTextBoxColumn.Name = "TRFDataGridViewTextBoxColumn"
         Me.TRFDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TransferBindingSource
+        '
+        Me.TransferBindingSource.DataMember = "Transfer"
+        Me.TransferBindingSource.DataSource = Me.TransferDataSet
+        '
+        'TransferDataSet
+        '
+        Me.TransferDataSet.DataSetName = "TransferDataSet"
+        Me.TransferDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TransferTableAdapter
+        '
+        Me.TransferTableAdapter.ClearBeforeFill = True
         '
         'DataGridView2
         '
@@ -164,30 +164,6 @@ Partial Class CekData
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(14, 13)
         Me.DataGridView2.TabIndex = 1
-        '
-        'GambarDataSet
-        '
-        Me.GambarDataSet.DataSetName = "GambarDataSet"
-        Me.GambarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'GambarDataSetBindingSource
-        '
-        Me.GambarDataSetBindingSource.DataSource = Me.GambarDataSet
-        Me.GambarDataSetBindingSource.Position = 0
-        '
-        'GambarDataSet2
-        '
-        Me.GambarDataSet2.DataSetName = "GambarDataSet2"
-        Me.GambarDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'GambarBindingSource
-        '
-        Me.GambarBindingSource.DataMember = "Gambar"
-        Me.GambarBindingSource.DataSource = Me.GambarDataSet2
-        '
-        'GambarTableAdapter
-        '
-        Me.GambarTableAdapter.ClearBeforeFill = True
         '
         'NISDataGridViewTextBoxColumn1
         '
@@ -216,6 +192,30 @@ Partial Class CekData
         Me.FileTypeDataGridViewTextBoxColumn.HeaderText = "FileType"
         Me.FileTypeDataGridViewTextBoxColumn.Name = "FileTypeDataGridViewTextBoxColumn"
         Me.FileTypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'GambarBindingSource
+        '
+        Me.GambarBindingSource.DataMember = "Gambar"
+        Me.GambarBindingSource.DataSource = Me.GambarDataSet2
+        '
+        'GambarDataSet2
+        '
+        Me.GambarDataSet2.DataSetName = "GambarDataSet2"
+        Me.GambarDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GambarDataSet
+        '
+        Me.GambarDataSet.DataSetName = "GambarDataSet"
+        Me.GambarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GambarDataSetBindingSource
+        '
+        Me.GambarDataSetBindingSource.DataSource = Me.GambarDataSet
+        Me.GambarDataSetBindingSource.Position = 0
+        '
+        'GambarTableAdapter
+        '
+        Me.GambarTableAdapter.ClearBeforeFill = True
         '
         'DataGridView3
         '
@@ -314,6 +314,7 @@ Partial Class CekData
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
         Me.Label22.Location = New System.Drawing.Point(646, 125)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(132, 25)
@@ -325,6 +326,7 @@ Partial Class CekData
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(658, 407)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(77, 25)
@@ -336,6 +338,7 @@ Partial Class CekData
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.White
         Me.Label20.Location = New System.Drawing.Point(617, 368)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(161, 25)
@@ -347,6 +350,7 @@ Partial Class CekData
         Me.Label19.AutoSize = True
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.White
         Me.Label19.Location = New System.Drawing.Point(658, 320)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(77, 25)
@@ -358,6 +362,7 @@ Partial Class CekData
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
         Me.Label18.Location = New System.Drawing.Point(617, 285)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(150, 25)
@@ -377,6 +382,7 @@ Partial Class CekData
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(284, 356)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(77, 25)
@@ -388,6 +394,7 @@ Partial Class CekData
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
         Me.Label16.Location = New System.Drawing.Point(284, 320)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(77, 25)
@@ -399,6 +406,7 @@ Partial Class CekData
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(284, 285)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(77, 25)
@@ -410,6 +418,7 @@ Partial Class CekData
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(284, 247)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(77, 25)
@@ -421,6 +430,7 @@ Partial Class CekData
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
         Me.Label13.Location = New System.Drawing.Point(284, 211)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(77, 25)
@@ -432,6 +442,7 @@ Partial Class CekData
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(284, 177)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(77, 25)
@@ -443,6 +454,7 @@ Partial Class CekData
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(284, 140)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(77, 25)
@@ -454,6 +466,7 @@ Partial Class CekData
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(284, 105)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(77, 25)
@@ -465,6 +478,7 @@ Partial Class CekData
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(41, 320)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(73, 25)
@@ -476,6 +490,7 @@ Partial Class CekData
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(41, 247)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 25)
@@ -487,6 +502,7 @@ Partial Class CekData
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(41, 356)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(67, 25)
@@ -498,6 +514,7 @@ Partial Class CekData
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(41, 285)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 25)
@@ -509,6 +526,7 @@ Partial Class CekData
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(41, 211)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 25)
@@ -520,6 +538,7 @@ Partial Class CekData
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(41, 177)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 25)
@@ -531,6 +550,7 @@ Partial Class CekData
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(41, 140)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(212, 25)
@@ -542,6 +562,7 @@ Partial Class CekData
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(41, 105)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(147, 25)
@@ -553,7 +574,8 @@ Partial Class CekData
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(349, 26)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(139, 25)
         Me.Label1.TabIndex = 43
@@ -561,7 +583,8 @@ Partial Class CekData
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Purple
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(354, 407)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(86, 38)
@@ -611,13 +634,13 @@ Partial Class CekData
         CType(Me.Sekolah, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransferDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransferBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransferDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GambarDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GambarDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GambarDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GambarDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GambarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

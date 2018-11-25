@@ -25,7 +25,6 @@ Partial Class Siswa_Baru
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Siswa_Baru))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.NAMADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TEMPATDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,25 +56,14 @@ Partial Class Siswa_Baru
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(453, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 40)
+        Me.Label1.Size = New System.Drawing.Size(244, 45)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Data Siswa Baru"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 21.75!)
-        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(444, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(262, 40)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Yayasan Deni Mulia"
         '
         'DataGridView1
         '
@@ -89,7 +77,7 @@ Partial Class Siswa_Baru
         Me.DataGridView1.Location = New System.Drawing.Point(12, 244)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1145, 374)
+        Me.DataGridView1.Size = New System.Drawing.Size(1145, 250)
         Me.DataGridView1.TabIndex = 3
         '
         'NAMADataGridViewTextBoxColumn
@@ -185,8 +173,9 @@ Partial Class Siswa_Baru
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Location = New System.Drawing.Point(213, 624)
+        Me.Button1.BackColor = System.Drawing.Color.Purple
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(215, 525)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 45)
         Me.Button1.TabIndex = 4
@@ -195,8 +184,9 @@ Partial Class Siswa_Baru
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button2.Location = New System.Drawing.Point(775, 624)
+        Me.Button2.BackColor = System.Drawing.Color.Purple
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(777, 525)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 45)
         Me.Button2.TabIndex = 5
@@ -207,6 +197,7 @@ Partial Class Siswa_Baru
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(120, 145)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 21)
@@ -217,11 +208,12 @@ Partial Class Siswa_Baru
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(41, 183)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 21)
+        Me.Label4.Size = New System.Drawing.Size(42, 21)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "NIS "
+        Me.Label4.Text = "NIS :"
         '
         'TextBox1
         '
@@ -232,7 +224,8 @@ Partial Class Siswa_Baru
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button3.BackColor = System.Drawing.Color.Purple
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(308, 180)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 29)
@@ -242,8 +235,9 @@ Partial Class Siswa_Baru
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button4.Location = New System.Drawing.Point(494, 624)
+        Me.Button4.BackColor = System.Drawing.Color.Purple
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(496, 525)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(115, 45)
         Me.Button4.TabIndex = 10
@@ -256,7 +250,7 @@ Partial Class Siswa_Baru
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1163, 681)
+        Me.ClientSize = New System.Drawing.Size(1163, 572)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
@@ -265,7 +259,6 @@ Partial Class Siswa_Baru
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -281,7 +274,6 @@ Partial Class Siswa_Baru
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents SekolahDataSet4 As SekolahDataSet4
     Friend WithEvents SekolahBindingSource As BindingSource
