@@ -45,5 +45,4 @@
             Form1.Show()
         End If
     End Sub
-
 End Class

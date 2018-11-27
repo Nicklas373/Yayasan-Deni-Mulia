@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Daftar_Ulang
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Daftar_Ulang
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Daftar_Ulang))
@@ -56,6 +56,9 @@ Partial Class Daftar_Ulang
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.SekolahDataSet5 = New Yayasan_Deni_Mulia.SekolahDataSet5()
+        Me.SekolahBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahTableAdapter1 = New Yayasan_Deni_Mulia.SekolahDataSet5TableAdapters.SekolahTableAdapter()
         CType(Me.SekolahDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +66,8 @@ Partial Class Daftar_Ulang
         CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -325,6 +330,20 @@ Partial Class Daftar_Ulang
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Terbilang :"
         '
+        'SekolahDataSet5
+        '
+        Me.SekolahDataSet5.DataSetName = "SekolahDataSet5"
+        Me.SekolahDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SekolahBindingSource1
+        '
+        Me.SekolahBindingSource1.DataMember = "Sekolah"
+        Me.SekolahBindingSource1.DataSource = Me.SekolahDataSet5
+        '
+        'SekolahTableAdapter1
+        '
+        Me.SekolahTableAdapter1.ClearBeforeFill = True
+        '
         'Daftar_Ulang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,6 +377,8 @@ Partial Class Daftar_Ulang
         CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -395,4 +416,7 @@ Partial Class Daftar_Ulang
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents SekolahDataSet5 As SekolahDataSet5
+    Friend WithEvents SekolahBindingSource1 As BindingSource
+    Friend WithEvents SekolahTableAdapter1 As SekolahDataSet5TableAdapters.SekolahTableAdapter
 End Class

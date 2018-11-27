@@ -7,6 +7,7 @@ Public Class Siswa_Baru
     Public da As New SqlDataAdapter
 
     Private Sub Siswa_Baru_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

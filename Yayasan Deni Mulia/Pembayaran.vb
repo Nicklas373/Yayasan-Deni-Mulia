@@ -28,6 +28,7 @@ Public Class Pembayaran
     Private sender As Object
 
     Private Sub Pembayaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         sklh_load()
         gambar_load()
         Label12.Visible = False

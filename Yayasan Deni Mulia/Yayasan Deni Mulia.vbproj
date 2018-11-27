@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -62,6 +62,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logopit_1541662194366_451__mvj_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -95,6 +98,7 @@
     <Compile Include="anggota.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CekData.Designer.vb">
       <DependentUpon>CekData.vb</DependentUpon>
     </Compile>
@@ -161,6 +165,7 @@
     <Compile Include="Informasi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Koneksi.vb" />
     <Compile Include="Konfirmasi.Designer.vb">
       <DependentUpon>Konfirmasi.vb</DependentUpon>
     </Compile>
@@ -217,6 +222,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SekolahDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SekolahDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="Siswa Baru.Designer.vb">
       <DependentUpon>Siswa Baru.vb</DependentUpon>
@@ -463,6 +473,17 @@
     <None Include="SekolahDataSet4.xss">
       <DependentUpon>SekolahDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="SekolahDataSet5.xsc">
+      <DependentUpon>SekolahDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet5.xss">
+      <DependentUpon>SekolahDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="TransferDataSet.xsc">
       <DependentUpon>TransferDataSet.xsd</DependentUpon>
     </None>
@@ -483,6 +504,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Data.mdf</DependentUpon>
     </Content>
+    <Content Include="logopit_1541662194366_451__mvj_icon.ico" />
     <Content Include="Sekolah.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
