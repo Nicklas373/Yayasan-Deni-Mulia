@@ -43,6 +43,7 @@ Partial Class Siswa_Lama
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -218,6 +219,18 @@ Partial Class Siswa_Lama
         Me.Button4.Text = "Cetak Data"
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Purple
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(414, 180)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(127, 29)
+        Me.Button5.TabIndex = 20
+        Me.Button5.Text = "Eksport Data"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'Siswa_Lama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -225,6 +238,7 @@ Partial Class Siswa_Lama
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1163, 596)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -264,4 +278,5 @@ Partial Class Siswa_Lama
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

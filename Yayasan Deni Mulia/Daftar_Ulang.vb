@@ -42,6 +42,8 @@ Public Class Daftar_Ulang
     Dim KLS As String
 
     Private Sub Daftar_Ulang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SekolahDataSet6.Sekolah' table. You can move, or remove it, as needed.
+        Me.SekolahTableAdapter2.Fill(Me.SekolahDataSet6.Sekolah)
         Call koneksi1()
         data_load()
         FilterData("")
@@ -53,6 +55,7 @@ Public Class Daftar_Ulang
         Label10.Visible = False
         Label11.Visible = False
         Label12.Visible = False
+        Label2.Visible = False
         ComboBox1.Items.Add("1")
         ComboBox1.Items.Add("2")
         ComboBox1.Items.Add("3")
@@ -98,8 +101,23 @@ Public Class Daftar_Ulang
             MsgBox("Data anda ditemukan", MsgBoxStyle.Information)
             If S1 = Label8.Text Then
                 checknama()
-                Register()
-                con.Close()
+                Label2.Text = DataGridView2.Item(3, DataGridView2.CurrentRow.Index).Value
+                If Label2.Text = ComboBox1.SelectedText Then
+                    MsgBox("Anda tidak dapat daftar di kelas yang sama", MsgBoxStyle.Information)
+                    MsgBox("Harap pilih kelas yang lain", MsgBoxStyle.Information)
+                    Label6.Visible = False
+                    Label10.Visible = False
+                    Label11.Visible = false
+                ElseIf Label2.Text > ComboBox1.Selectedtext Then
+                    MsgBox("Anda tidak dapat daftar jika kelas anda lebih rendah dari kelas yang dipilih", MsgBoxStyle.Critical)
+                    MsgBox("Harap pilih kelas yang lain", MsgBoxStyle.Information)
+                    Label6.Visible = False
+                    Label10.Visible = False
+                    Label11.Visible = False
+                Else
+                    Register()
+                    con.Close()
+                End If
             ElseIf S2 = Label8.Text Then
                 checknama()
                 MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)

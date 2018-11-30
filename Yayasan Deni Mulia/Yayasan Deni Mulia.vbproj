@@ -142,6 +142,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSiswaSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="excel.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +228,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SekolahDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SekolahDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekolahDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Siswa Baru.Designer.vb">
       <DependentUpon>Siswa Baru.vb</DependentUpon>
@@ -484,6 +490,17 @@
     <None Include="SekolahDataSet5.xss">
       <DependentUpon>SekolahDataSet5.xsd</DependentUpon>
     </None>
+    <None Include="SekolahDataSet6.xsc">
+      <DependentUpon>SekolahDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SekolahDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekolahDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekolahDataSet6.xss">
+      <DependentUpon>SekolahDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="TransferDataSet.xsc">
       <DependentUpon>TransferDataSet.xsd</DependentUpon>
     </None>
@@ -524,6 +541,35 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
