@@ -39,9 +39,9 @@ Module Export1
          Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue)
             xlWorkBook.Close(True, misValue, misValue)
             xlApp.Quit()
-            MsgBox("Data berhasil di export", MsgBoxStyle.Information)
+            MsgBox("Data berhasil di cetak", MsgBoxStyle.Information)
         Else
-            MsgBox("Data gagal di export", MsgBoxStyle.Critical)
+            MsgBox("Data gagal di cetak", MsgBoxStyle.Critical)
         End If
 
         releaseObject(xlWorkSheet)

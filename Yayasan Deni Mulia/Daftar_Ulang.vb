@@ -42,8 +42,6 @@ Public Class Daftar_Ulang
     Dim KLS As String
 
     Private Sub Daftar_Ulang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'SekolahDataSet6.Sekolah' table. You can move, or remove it, as needed.
-        Me.SekolahTableAdapter2.Fill(Me.SekolahDataSet6.Sekolah)
         Call koneksi1()
         data_load()
         FilterData("")

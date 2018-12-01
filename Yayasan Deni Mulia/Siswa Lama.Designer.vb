@@ -228,7 +228,7 @@ Partial Class Siswa_Lama
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(127, 29)
         Me.Button5.TabIndex = 20
-        Me.Button5.Text = "Eksport Data"
+        Me.Button5.Text = "Cetak Excel"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Siswa_Lama

@@ -251,9 +251,9 @@ Partial Class Siswa_Baru
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Location = New System.Drawing.Point(409, 180)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(121, 29)
+        Me.Button5.Size = New System.Drawing.Size(102, 29)
         Me.Button5.TabIndex = 11
-        Me.Button5.Text = "Eksport Data"
+        Me.Button5.Text = "Cetak Excel"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Siswa_Baru
