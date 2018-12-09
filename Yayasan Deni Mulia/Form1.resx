@@ -839,13 +839,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="SiswaBaruToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>135, 22</value>
   </data>
   <data name="SiswaBaruToolStripMenuItem.Text" xml:space="preserve">
     <value>Siswa Baru</value>
   </data>
   <data name="SiswaLamaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>135, 22</value>
   </data>
   <data name="SiswaLamaToolStripMenuItem.Text" xml:space="preserve">
     <value>Siswa Lama</value>
@@ -860,13 +860,13 @@
     <value>Cek Data Siswa</value>
   </data>
   <data name="TentangKamiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>161, 22</value>
   </data>
   <data name="TentangKamiToolStripMenuItem.Text" xml:space="preserve">
     <value>Tentang Kami</value>
   </data>
   <data name="TentangAplikasiToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>161, 22</value>
   </data>
   <data name="TentangAplikasiToolStripMenuItem1.Text" xml:space="preserve">
     <value>Tentang Aplikasi</value>
