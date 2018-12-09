@@ -40,6 +40,7 @@ Partial Class Informasi
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -226,9 +227,9 @@ Partial Class Informasi
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(727, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(712, 70)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(118, 158)
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 164)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
@@ -245,6 +246,17 @@ Partial Class Informasi
         Me.Button1.Text = "Kembali"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(697, 251)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(152, 13)
+        Me.Label15.TabIndex = 9
+        Me.Label15.Text = "( Drs. Deni Tri Muslimin, M.Pd )"
+        '
         'Informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -252,6 +264,7 @@ Partial Class Informasi
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(857, 429)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -284,4 +297,5 @@ Partial Class Informasi
     Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label15 As Label
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Daftar_Ulang
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Daftar_Ulang
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Daftar_Ulang))
@@ -56,6 +56,13 @@ Partial Class Daftar_Ulang
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.SekolahDataSet5 = New Yayasan_Deni_Mulia.SekolahDataSet5()
+        Me.SekolahBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahTableAdapter1 = New Yayasan_Deni_Mulia.SekolahDataSet5TableAdapters.SekolahTableAdapter()
+        Me.SekolahDataSet6 = New Yayasan_Deni_Mulia.SekolahDataSet6()
+        Me.SekolahBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SekolahTableAdapter2 = New Yayasan_Deni_Mulia.SekolahDataSet6TableAdapters.SekolahTableAdapter()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.SekolahDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SekolahBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +70,10 @@ Partial Class Daftar_Ulang
         CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahDataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SekolahBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -325,6 +336,43 @@ Partial Class Daftar_Ulang
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Terbilang :"
         '
+        'SekolahDataSet5
+        '
+        Me.SekolahDataSet5.DataSetName = "SekolahDataSet5"
+        Me.SekolahDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SekolahBindingSource1
+        '
+        Me.SekolahBindingSource1.DataMember = "Sekolah"
+        Me.SekolahBindingSource1.DataSource = Me.SekolahDataSet5
+        '
+        'SekolahTableAdapter1
+        '
+        Me.SekolahTableAdapter1.ClearBeforeFill = True
+        '
+        'SekolahDataSet6
+        '
+        Me.SekolahDataSet6.DataSetName = "SekolahDataSet6"
+        Me.SekolahDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SekolahBindingSource2
+        '
+        Me.SekolahBindingSource2.DataMember = "Sekolah"
+        Me.SekolahBindingSource2.DataSource = Me.SekolahDataSet6
+        '
+        'SekolahTableAdapter2
+        '
+        Me.SekolahTableAdapter2.ClearBeforeFill = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(713, 30)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Label2"
+        '
         'Daftar_Ulang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,6 +380,7 @@ Partial Class Daftar_Ulang
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(819, 457)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
@@ -358,6 +407,10 @@ Partial Class Daftar_Ulang
         CType(Me.DataDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahDataSet6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SekolahBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -395,4 +448,11 @@ Partial Class Daftar_Ulang
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents SekolahDataSet5 As SekolahDataSet5
+    Friend WithEvents SekolahBindingSource1 As BindingSource
+    Friend WithEvents SekolahTableAdapter1 As SekolahDataSet5TableAdapters.SekolahTableAdapter
+    Friend WithEvents SekolahDataSet6 As SekolahDataSet6
+    Friend WithEvents SekolahBindingSource2 As BindingSource
+    Friend WithEvents SekolahTableAdapter2 As SekolahDataSet6TableAdapters.SekolahTableAdapter
+    Friend WithEvents Label2 As Label
 End Class

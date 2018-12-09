@@ -11,4 +11,8 @@ Public Class Konfirmasi
         Pembayaran.Close()
         Daftar.Close()
     End Sub
+
+    Private Sub Konfirmasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
+    End Sub
 End Class

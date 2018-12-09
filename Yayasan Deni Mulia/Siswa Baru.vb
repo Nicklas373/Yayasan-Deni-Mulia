@@ -7,6 +7,7 @@ Public Class Siswa_Baru
     Public da As New SqlDataAdapter
 
     Private Sub Siswa_Baru_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -88,4 +89,22 @@ Public Class Siswa_Baru
             End If
         End If
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        If DataGridView1.Rows.Count > 0 Then
+            Call Show1(DataGridView1)
+        ElseIf DataGridView1.Rows.Count < 1 Then
+            Data_Refresh()
+            If DataGridView1.Rows.Count > 0 Then
+                Call Show1(DataGridView1)
+            Else
+                MsgBox("Data tidak tersedia", MsgBoxStyle.Critical)
+                MsgBox("Harap perbaharui data tabel", MsgBoxStyle.Information)
+            End If
+        Else
+            MsgBox("Data tidak tersedia", MsgBoxStyle.Critical)
+            MsgBox("Harap perbaharui data tabel", MsgBoxStyle.Information)
+        End If
+    End Sub
+
 End Class

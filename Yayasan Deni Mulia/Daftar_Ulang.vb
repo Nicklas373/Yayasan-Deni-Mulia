@@ -42,6 +42,7 @@ Public Class Daftar_Ulang
     Dim KLS As String
 
     Private Sub Daftar_Ulang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         data_load()
         FilterData("")
         DataGridView2.Visible = False
@@ -52,6 +53,7 @@ Public Class Daftar_Ulang
         Label10.Visible = False
         Label11.Visible = False
         Label12.Visible = False
+        Label2.Visible = False
         ComboBox1.Items.Add("1")
         ComboBox1.Items.Add("2")
         ComboBox1.Items.Add("3")
@@ -63,8 +65,6 @@ Public Class Daftar_Ulang
         Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
         Dim con = New SqlConnection(cons)
 
-        'TODO: This line of code loads data into the 'DataDataSet2.Data' table. You can move, or remove it, as needed.
-        Me.DataTableAdapter1.Fill(Me.DataDataSet2.Data)
         con.Open()
         'SET A NEW SPECIFIC TABLE IN THE DATABASE
         dt = New DataTable
@@ -85,32 +85,55 @@ Public Class Daftar_Ulang
     End Function
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        checknama()
-        Label8.Text = DataGridView2.Item(5, DataGridView2.CurrentRow.Index).Value
-        If S1 = Label8.Text Then
-            FilterData(TextBox2.Text)
-            Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
-            Dim con = New SqlConnection(cons)
-            Dim query As String = "select NIS from Data where NIS=@NIS"
-            con.Open()
-            cmd = New SqlCommand(query, con)
-            cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
-            Dim dr As SqlDataReader
-            dr = cmd.ExecuteReader()
-            If (dr.HasRows) Then
-                MsgBox("Data anda ditemukan", MsgBoxStyle.Information)
-                Daftar()
+        FilterData(TextBox2.Text)
+        Dim cons As String = System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString
+        Dim con = New SqlConnection(cons)
+        Dim query As String = "select NIS from Data where NIS=@NIS"
+        con.Open()
+        cmd = New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@NIS", TextBox2.Text)
+        Dim dr As SqlDataReader
+        dr = cmd.ExecuteReader()
+        If (dr.HasRows) Then
+            Label8.Text = DataGridView2.Item(5, DataGridView2.CurrentRow.Index).Value
+            MsgBox("Data anda ditemukan", MsgBoxStyle.Information)
+            If S1 = Label8.Text Then
+                checknama()
+                Label2.Text = DataGridView2.Item(3, DataGridView2.CurrentRow.Index).Value
+                If Label2.Text = ComboBox1.SelectedText Then
+                    MsgBox("Anda tidak dapat daftar di kelas yang sama", MsgBoxStyle.Information)
+                    MsgBox("Harap pilih kelas yang lain", MsgBoxStyle.Information)
+                    Label6.Visible = False
+                    Label10.Visible = False
+                    Label11.Visible = false
+                ElseIf Label2.Text > ComboBox1.Selectedtext Then
+                    MsgBox("Anda tidak dapat daftar jika kelas anda lebih rendah dari kelas yang dipilih", MsgBoxStyle.Critical)
+                    MsgBox("Harap pilih kelas yang lain", MsgBoxStyle.Information)
+                    Label6.Visible = False
+                    Label10.Visible = False
+                    Label11.Visible = False
+                Else
+                    Register()
+                    con.Close()
+                End If
+            ElseIf S2 = Label8.Text Then
+                checknama()
+                MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)
                 con.Close()
             Else
-                MsgBox("Data anda tidak ditemukan", MsgBoxStyle.Critical)
+                MsgBox("error", MsgBoxStyle.Critical)
                 con.Close()
             End If
         Else
-            MsgBox("Anda sudah mendaftar ulang", MsgBoxStyle.Information)
+            MsgBox("Data anda tidak ditemukan", MsgBoxStyle.Critical)
+            MsgBox("Harap Daftar Baru Kembali", MsgBoxStyle.Information)
+            con.Close()
+            Me.Close()
+            Daftar.show()
         End If
     End Sub
 
-    Private Function Daftar()
+    Private Function Register()
         Label7.Text = DataGridView2.Item(2, DataGridView2.CurrentRow.Index).Value
         If Label7.Text = AK Then
             If ComboBox1.SelectedText = A Then
@@ -256,7 +279,7 @@ Public Class Daftar_Ulang
             If bayar >= harga Then
                 con.Close()
                 hasil = bayar - harga
-                MsgBox("Anda membayar sebesar : " + Format(bayar, "#,###,##0") + vbCrLf + "Kembalian anda sebesar : " + "Rp. " + Format(hasil, "#,###,##0"))
+                MsgBox("Anda membayar sebesar : " + Format(bayar, "#,###,##0") + vbCrLf + "Kembalian anda sebesar : " + "Rp. " + Format(hasil, "#,###,##0"), MsgBoxStyle.Information)
                 Dim updateQuery As String = "UPDATE dbo.Data SET dbo.Data.STATUS = @status WHERE Data.NIS = @nis"
                 con.Open()
                 Using cmd As New SqlCommand(updateQuery, con)
@@ -289,7 +312,7 @@ Public Class Daftar_Ulang
             ElseIf bayar <= harga Then
                 con.Close()
                 hasil = harga - bayar
-                MsgBox("Anda membayar sebesar : " + Format(bayar, "#,###,##0") + vbCrLf + "Uang anda kurang sebesar : " + " " + "Rp. " + Format(hasil, "#,###,##0") + vbCrLf + "Pembayaran ditunda")
+                MsgBox("Anda membayar sebesar : " + Format(bayar, "#,###,##0") + vbCrLf + "Uang anda kurang sebesar : " + " " + "Rp. " + Format(hasil, "#,###,##0") + vbCrLf + "Pembayaran ditunda", MsgBoxStyle.Critical)
             Else
                 con.Close()
             End If

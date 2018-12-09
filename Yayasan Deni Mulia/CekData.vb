@@ -3,13 +3,13 @@ Imports System.Data.SqlClient
 Imports System.IO
 
 Public Class CekData
-
     Public con = New SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Sekolah").ConnectionString)
     Public cmd As SqlCommand
     Public con2 = New SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("Yayasan_Deni_Mulia.My.MySettings.Data").ConnectionString)
     Public cmd2 As SqlCommand
 
     Private Sub CekData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         'TODO: This line of code loads data into the 'GambarDataSet2.Gambar' table. You can move, or remove it, as needed.
         Me.GambarTableAdapter.Fill(Me.GambarDataSet2.Gambar)
         'TODO: This line of code loads data into the 'TransferDataSet.Transfer' table. You can move, or remove it, as needed.
@@ -25,13 +25,13 @@ Public Class CekData
             checkimage()
             transfer("")
             DataLoad()
-        ElseIf Application.OpenForms().OfType(Of siswa_baru).Any Then
+        ElseIf Application.OpenForms().OfType(Of Siswa_Baru).Any Then
             FilterData("")
             gambar("")
             checkimage2()
             transfer("")
             DataLoad2()
-        ElseIf Application.OpenForms().OfType(Of siswa_lama).Any Then
+        ElseIf Application.OpenForms().OfType(Of Siswa_Lama).Any Then
             FilterData("")
             gambar("")
             checkimage3()

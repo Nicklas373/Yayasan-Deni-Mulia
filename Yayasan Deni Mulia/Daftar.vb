@@ -105,6 +105,7 @@ Public Class Daftar
     End Function
 
     Private Sub Daftar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         'TODO: This line of code loads data into the 'SekolahDataSet.Sekolah' table. You can move, or remove it, as needed.
         Me.SekolahTableAdapter1.Fill(Me.SekolahDataSet.Sekolah)
         ComboBox2.Items.Add("Futsal")

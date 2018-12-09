@@ -7,6 +7,7 @@ Public Class TampilData
     Public da As New SqlDataAdapter
 
     Private Sub TampilData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         Refresh_load()
     End Sub
 

@@ -13,6 +13,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call koneksi1()
         ProgressBar1.Hide()
     End Sub
 
